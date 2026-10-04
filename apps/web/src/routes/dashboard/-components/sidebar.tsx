@@ -17,7 +17,6 @@ import {
 	UserGearIcon,
 } from "@phosphor-icons/react";
 import { Link } from "@tanstack/react-router";
-import { AnimatePresence, m } from "motion/react";
 import { Avatar, AvatarFallback, AvatarImage } from "@reactive-resume/ui/components/avatar";
 import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
 import { Kbd } from "@reactive-resume/ui/components/kbd";
@@ -34,13 +33,10 @@ import {
 	SidebarMenuItem,
 	SidebarRail,
 	SidebarSeparator,
-	useSidebarState,
 } from "@reactive-resume/ui/components/sidebar";
 import { getInitials } from "@reactive-resume/utils/string";
-import { Copyright } from "@/components/ui/copyright";
 import { useCommandPaletteStore } from "@/features/command-palette/store";
 import { UserDropdownMenu } from "@/features/user/dropdown-menu";
-import { EASE_OUT_STRONG } from "@/libs/motion";
 
 type SidebarItem = {
 	icon: React.ReactNode;
@@ -160,7 +156,6 @@ function SidebarSearchButton() {
 
 export function DashboardSidebar() {
 	const { i18n } = useLingui();
-	const { state } = useSidebarState();
 
 	return (
 		<Sidebar variant="floating" collapsible="icon">
@@ -228,19 +223,6 @@ export function DashboardSidebar() {
 						</UserDropdownMenu>
 					</SidebarMenuItem>
 				</SidebarMenu>
-
-				<AnimatePresence>
-					{state === "expanded" && (
-						<m.div
-							key="copyright"
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1, transition: { duration: 0.2, ease: EASE_OUT_STRONG } }}
-							exit={{ opacity: 0, transition: { duration: 0.08 } }}
-						>
-							<Copyright className="wrap-break-word shrink-0 whitespace-normal p-2" />
-						</m.div>
-					)}
-				</AnimatePresence>
 			</SidebarFooter>
 
 			<SidebarRail />
