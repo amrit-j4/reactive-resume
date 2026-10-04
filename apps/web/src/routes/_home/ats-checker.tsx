@@ -11,7 +11,7 @@ import { ParsePreview } from "@/features/ats-checker/parse-preview";
 import { EASE_OUT_STRONG } from "@/libs/motion";
 import { Footer } from "./-sections/footer";
 
-const PAGE_TITLE = "ATS Checker - Reactive Resume";
+const PAGE_TITLE = "ATS Checker - Job4online";
 const PAGE_DESCRIPTION =
 	"Check whether software can read your resume PDF. Runs entirely in your browser, so your file is never uploaded.";
 
@@ -23,7 +23,7 @@ const AtsCheckerTool = lazy(() =>
 export const Route = createFileRoute("/_home/ats-checker")({
 	component: RouteComponent,
 	head: () => {
-		const origin = typeof window === "undefined" ? "https://rxresu.me" : window.location.origin;
+		const origin = typeof window === "undefined" ? "https://resume.job4online.com.au" : window.location.origin;
 		const canonicalUrl = new URL("/ats-checker", origin).toString();
 		const imageUrl = new URL("/opengraph/ats-checker.png", origin).toString();
 

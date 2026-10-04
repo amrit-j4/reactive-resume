@@ -127,13 +127,13 @@ describe("generateOpenApiSpec", () => {
 		const spec = await generateSpec();
 
 		expect(spec.info).toMatchObject({
-			title: "Reactive Resume",
+			title: "Job4online",
 			version: "9.8.7",
 		});
 		expect(spec.servers).toEqual([{ url: "https://rxresu.me/api/openapi" }]);
 		expect(spec.externalDocs).toEqual({
 			url: "https://docs.rxresu.me",
-			description: "Reactive Resume Documentation",
+			description: "Reactive Resume Documentation (upstream)",
 		});
 	}, 15_000);
 

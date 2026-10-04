@@ -108,7 +108,7 @@ describe("web app fallback classification", () => {
 
 			const html = await (await handleWebApp(new Request("https://example.com/ats-checker"))).text();
 
-			expect(html).toContain("<title>ATS Checker - Reactive Resume</title>");
+			expect(html).toContain("<title>ATS Checker - Job4online</title>");
 			expect(html).toContain('<link rel="canonical" href="https://rxresu.me/ats-checker">');
 			expect(html).toContain('<meta property="og:url" content="https://rxresu.me/ats-checker">');
 			expect(html).toContain('<meta property="og:image" content="https://rxresu.me/opengraph/ats-checker.png">');
@@ -146,7 +146,7 @@ describe("web app fallback classification", () => {
 			const html = await (await handleWebApp(new Request("https://example.com/jane/resume"))).text();
 
 			expect(mocks.getPublicResumeSocialMeta).toHaveBeenCalledWith({ username: "jane", slug: "resume" });
-			expect(html).toContain("<title>Jane Doe - Reactive Resume</title>");
+			expect(html).toContain("<title>Jane Doe - Job4online</title>");
 			expect(html).toContain('<meta name="description" content="Builds resilient distributed systems.">');
 			expect(html).not.toContain("Marketing copy.");
 			expect(html).toContain('<link rel="canonical" href="https://rxresu.me/jane/resume">');

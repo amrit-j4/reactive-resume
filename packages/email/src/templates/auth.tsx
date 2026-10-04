@@ -20,8 +20,8 @@ import {
 // ponytail: server dev consumes this source through tsx, which emits React.createElement here.
 void React;
 
-const appName = "Reactive Resume";
-const logoUrl = "https://rxresu.me/icon/dark.svg";
+const appName = "Job4online";
+const logoUrl = "https://resume.job4online.com.au/pwa-192x192.png";
 
 interface AuthEmailLayoutProps {
 	preview: string;
@@ -125,7 +125,7 @@ function AuthEmailLayout({ preview, heading, intro, details, actionLabel, action
 								.
 							</Text>
 
-							<Text className="mt-8 font-heading font-medium text-base tracking-tight opacity-80">Reactive Resume</Text>
+							<Text className="mt-8 font-heading font-medium text-base tracking-tight opacity-80">Job4online</Text>
 						</Section>
 					</Container>
 				</Body>
@@ -147,7 +147,7 @@ export function ResetPasswordEmail({ url }: ResetPasswordEmailProps) {
 			details="If this was not you, you can ignore this message and your password will remain unchanged."
 			actionLabel="Create New Password"
 			actionUrl={url}
-			outro="For security, only use links from emails sent by Reactive Resume."
+			outro="For security, only use links from emails sent by Job4online."
 		/>
 	);
 }

@@ -1,6 +1,6 @@
-const productionRootUrl = "https://rxresu.me/";
-const appName = "Reactive Resume";
-const repositoryUrl = "https://github.com/reactive-resume/reactive-resume";
+const productionRootUrl = "https://resume.job4online.com.au/";
+const appName = "Job4online";
+const repositoryUrl = "https://github.com/amrit-j4/reactive-resume";
 
 type JsonLd = Record<string, unknown>;
 
@@ -73,7 +73,7 @@ export const getRootStructuredData = (canonicalUrl: string): JsonLd[] => [
 		name: appName,
 		url: canonicalUrl,
 		description:
-			"Reactive Resume is a free and open-source resume builder that makes it easy to create, update, and share your resume.",
+			"Job4online is a free and open-source resume builder that makes it easy to create, update, and share your resume.",
 		applicationCategory: "BusinessApplication",
 		operatingSystem: "Web",
 		isAccessibleForFree: true,
@@ -111,28 +111,28 @@ export const createRootStructuredDataScript = (canonicalUrl: string) =>
 
 const homeFaqJsonLdItems = [
 	{
-		question: "Is Reactive Resume really free?",
+		question: "Is Job4online really free?",
 		answer:
-			"Yes. Reactive Resume is free to use, with no hidden costs, premium tiers, or subscription fees. It's open source, and it will stay free.",
+			"Yes. Job4online is free to use, with no hidden costs, premium tiers, or subscription fees. It's open source, and it will stay free.",
 	},
 	{
 		question: "How is my data protected?",
 		answer:
-			"Your data is stored securely and never shared with third parties. If you want full control over it, you can self-host Reactive Resume on your own servers.",
+			"Your data is stored securely and never shared with third parties. If you want full control over it, you can self-host Job4online on your own servers.",
 	},
 	{
 		question: "Can I export my resume to PDF?",
 		answer: "Yes. One click exports your resume to PDF, with your formatting and styling intact.",
 	},
 	{
-		question: "Is Reactive Resume available in multiple languages?",
+		question: "Is Job4online available in multiple languages?",
 		answer:
 			"Yes. Pick your language on the settings page, or with the language switcher in the top right corner. If your language is missing, or the existing translation could be better, you can contribute to the translations on Crowdin.",
 	},
 	{
-		question: "What makes Reactive Resume different from other resume builders?",
+		question: "What makes Job4online different from other resume builders?",
 		answer:
-			"Reactive Resume is open source, private, and free. It shows no ads, doesn't track what you do, and doesn't lock features behind a paywall.",
+			"Job4online is open source, private, and free. It shows no ads, doesn't track what you do, and doesn't lock features behind a paywall.",
 	},
 	{
 		question: "How do I share my resume?",

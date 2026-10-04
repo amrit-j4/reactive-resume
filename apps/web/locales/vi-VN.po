@@ -152,10 +152,6 @@ msgstr ""
 msgid "<0>Free forever and open source.</0><1/>No ads, paywalls, or tracking."
 msgstr "<0>Miễn phí vĩnh viễn và mã nguồn mở.</0><1/>Không quảng cáo, không tường phí, không theo dõi."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "<0>Thank you for using Reactive Resume. I build this app mostly in my spare time, with help from open-source contributors around the world.</0><1>If it has been useful to you and you'd like to keep it free and open for everyone, please consider donating. Any amount helps.</1>"
-msgstr "<0>Cảm ơn bạn đã sử dụng Reactive Resume. Tôi xây dựng ứng dụng này chủ yếu trong thời gian rảnh, với sự giúp đỡ của những người đóng góp mã nguồn mở trên khắp thế giới.</0><1>Nếu nó hữu ích với bạn và bạn muốn giữ cho nó miễn phí và mở với tất cả mọi người, xin hãy cân nhắc quyên góp. Mọi khoản đóng góp đều có ý nghĩa.</1>"
-
 #: src/features/homepage/export-playground.tsx
 msgid "<p>I design software for teams, from early research to the details people use every day.</p>"
 msgstr "<p>Tôi thiết kế phần mềm cho các nhóm, từ những nghiên cứu ban đầu đến từng chi tiết mà mọi người dùng hằng ngày.</p>"
@@ -279,10 +275,6 @@ msgstr "Một trang bị xoay."
 #: src/features/homepage/site-footer.tsx
 msgid "A passion project by <0>Amruth Pillai</0>"
 msgstr "Một dự án tâm huyết của <0>Amruth Pillai</0>"
-
-#: src/components/ui/copyright.tsx
-msgid "A passion project by <0>Amruth Pillai</0>."
-msgstr "Một dự án tâm huyết của <0>Amruth Pillai</0>."
 
 #: src/features/homepage/page.tsx
 msgid "A PDF for the application. A Word file for a few more edits. Download a sample using your choices."
@@ -953,6 +945,10 @@ msgstr "Mã dự phòng đã được sao chép vào bộ nhớ tạm."
 msgid "Base URL"
 msgstr "URL cơ sở"
 
+#: src/components/ui/copyright.tsx
+msgid "Based on <0>Reactive Resume</0> by <1>Amruth Pillai</1>."
+msgstr ""
+
 #: src/libs/resume/section.tsx
 msgid "Basics"
 msgstr "Cơ bản"
@@ -1031,8 +1027,6 @@ msgstr "Danh sách chấm tròn"
 msgid "Bulleted list"
 msgstr "Danh sách có dấu đầu dòng"
 
-#. Tagline shown in app footer/about area
-#: src/components/ui/copyright.tsx
 #: src/features/homepage/site-footer.tsx
 msgid "By the community, for the community."
 msgstr "Bởi cộng đồng, vì cộng đồng."
@@ -1106,7 +1100,6 @@ msgid "Changed your mind? Rename your resume to something more descriptive."
 msgstr "Bạn đã đổi ý? Đổi tên sơ yếu lý lịch của bạn thành một cái tên mô tả hơn."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Changelog"
 msgstr "Nhật ký thay đổi"
 
@@ -1294,7 +1287,6 @@ msgid "Command Palette - {currentPage}"
 msgstr "Bảng lệnh - {currentPage}"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Community"
 msgstr "Cộng đồng"
 
@@ -1405,8 +1397,8 @@ msgid "Continue where you left off"
 msgstr "Tiếp tục từ nơi bạn đã dừng lại"
 
 #: src/dialogs/resume/import.tsx
-msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, and JSON files from Reactive Resume or JSON Resume."
-msgstr "Tiếp tục từ chỗ bạn đang dở bằng cách nhập một sơ yếu lý lịch bạn đã tạo trong Reactive Resume hoặc một công cụ tạo sơ yếu lý lịch khác. Các định dạng được hỗ trợ là PDF, Microsoft Word và tệp JSON từ Reactive Resume hoặc JSON Resume."
+msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, a LinkedIn data export, and JSON files from Reactive Resume or JSON Resume."
+msgstr ""
 
 #: src/features/homepage/page.tsx
 msgid "Contribute code"
@@ -2072,7 +2064,6 @@ msgid "Disconnect"
 msgstr "Ngắt kết nối"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Discord"
 msgstr "Discord"
 
@@ -2097,14 +2088,6 @@ msgstr "Tài liệu đã gửi"
 #: src/features/auth/pages/login.tsx
 msgid "Don't have an account? <0/>"
 msgstr "Chưa có tài khoản? <0/>"
-
-#: src/components/ui/donation-toast.tsx
-msgid "Donate"
-msgstr "Quyên tặng"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Donate to Reactive Resume"
-msgstr "Đóng góp cho Reactive Resume"
 
 #: src/routes/agent/-components/tool-part-card.tsx
 msgid "Done"
@@ -2883,7 +2866,6 @@ msgstr "Bắt đầu"
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -3300,6 +3282,19 @@ msgstr "Liên kết tin tuyển dụng"
 msgid "Job search pipeline"
 msgstr "Quy trình tìm việc"
 
+#: src/routes/_home/-sections/header.tsx
+msgid "Job4online - Go to homepage"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Job4online Job Board"
+msgstr ""
+
+#. App version label in footer; includes semantic version variable
+#: src/components/ui/copyright.tsx
+msgid "Job4online Resume Builder v<0>{__APP_VERSION__}</0>"
+msgstr ""
+
 #: src/features/command-palette/pages/navigation.tsx
 msgid "Jobs"
 msgstr "Việc làm"
@@ -3554,29 +3549,33 @@ msgid "Line Height"
 msgstr "Chiều cao giữa các dòng"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume (recommended)"
-msgstr "Liên kết Reactive Resume (được khuyến nghị)"
-
-#: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume to use AI match scoring and tailoring."
-msgstr "Liên kết một Reactive Resume để dùng tính năng chấm điểm mức độ phù hợp và tinh chỉnh bằng AI."
+msgid "Link a resume (recommended)"
+msgstr ""
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Link a resume and paste the job description (Edit) to score your fit and tailor a copy."
 msgstr "Liên kết một sơ yếu lý lịch và dán mô tả công việc (Biên tập) để chấm điểm mức độ phù hợp và tinh chỉnh một bản sao."
 
+#: src/features/applications/components/application-form-sheet.tsx
+msgid "Link a resume to use AI match scoring and tailoring."
+msgstr ""
+
 #: src/features/applications/components/application-detail-sheet.tsx
-msgid "Linked Reactive Resume"
-msgstr "Reactive Resume đã liên kết"
+msgid "Linked resume"
+msgstr ""
 
 #. Authentication provider display name in account settings
 #. Brand name label for LinkedIn social sign-in button
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "LinkedIn"
 msgstr "LinkedIn"
+
+#. Import source option for a LinkedIn data export ZIP
+#: src/dialogs/resume/import.tsx
+msgid "LinkedIn (Data Export)"
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "LinkedIn, Referral…"
@@ -4218,7 +4217,6 @@ msgstr "Mở trong tab mới"
 
 #: src/features/homepage/site-footer.tsx
 #: src/features/resume/stylesheet/editor.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "mở ở tab mới"
 
@@ -4465,10 +4463,6 @@ msgstr "Văn bản thuần, dành cho các công cụ AI và chỉnh sửa nhanh
 msgid "Play data flow animation"
 msgstr "Phát hoạt ảnh dòng dữ liệu"
 
-#: src/components/ui/donation-toast.tsx
-msgid "Please support the project"
-msgstr "Hãy ủng hộ dự án!"
-
 #: src/features/applications/components/file-attachment-field.tsx
 msgid "Please upload a PDF file."
 msgstr "Vui lòng tải lên tệp PDF."
@@ -4695,10 +4689,6 @@ msgstr "Xuất lại với font đã nhúng, sau đó mở tệp và kiểm tra 
 msgid "Re-score"
 msgstr "Chấm điểm lại"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Reactive Resume - Go to homepage"
-msgstr "Reactive Resume - Về trang chủ"
-
 #. Import source option for current Reactive Resume JSON format
 #: src/dialogs/resume/import.tsx
 msgid "Reactive Resume (JSON)"
@@ -4707,15 +4697,6 @@ msgstr "Sơ yếu lý lịch động (JSON)"
 #: src/features/homepage/page.tsx
 msgid "Reactive Resume is free and open source. Amruth and a community of contributors keep it running. If you’d like to support the work, donations help cover hosting and development."
 msgstr "Reactive Resume miễn phí và mã nguồn mở. Amruth cùng cộng đồng những người đóng góp luôn duy trì nó. Nếu bạn muốn ủng hộ, các khoản quyên góp sẽ giúp trang trải chi phí lưu trữ và phát triển."
-
-#: src/components/ui/donation-toast.tsx
-msgid "Reactive Resume is free and open source. If it has helped you, please consider donating."
-msgstr "Reactive Resume là phần mềm mã nguồn mở miễn phí. Nếu thấy hữu ích, xin vui lòng xem xét quyên góp."
-
-#. App version label in footer; includes semantic version variable
-#: src/components/ui/copyright.tsx
-msgid "Reactive Resume v<0>{__APP_VERSION__}</0>"
-msgstr "Reactive Resume v<0>{__APP_VERSION__}</0>"
 
 #. Import source option for legacy Reactive Resume v4 JSON format
 #: src/dialogs/resume/import.tsx
@@ -4925,12 +4906,7 @@ msgstr "Thay thế thư xin việc đính kèm?"
 msgid "Report a bug"
 msgstr "Báo lỗi"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Report a Bug"
-msgstr "Báo lỗi"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Report an issue"
 msgstr "Báo cáo sự cố"
 
@@ -5813,12 +5789,7 @@ msgstr "Tây Ban Nha"
 msgid "Spell the month, as in \"Mar 2022\"."
 msgstr "Viết đầy đủ tên tháng, chẳng hạn \"Tháng 3 năm 2022\"."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Sponsors"
-msgstr "Nhà tài trợ"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Sponsorships"
 msgstr "Tài trợ"
 
@@ -5950,7 +5921,6 @@ msgid "Styling and sender details refreshed from the selected resume."
 msgstr "Chi tiết về kiểu dáng và người gửi được làm mới từ sơ yếu lý lịch đã chọn."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Subreddit"
 msgstr "Subreddit"
 
@@ -5967,10 +5937,6 @@ msgstr "Gợi ý"
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "Summary"
 msgstr "Tóm tắt"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Support the app by doing what you can!"
-msgstr "Hãy ủng hộ ứng dụng bằng cách làm bất cứ điều gì bạn có thể!"
 
 #: src/features/homepage/page.tsx
 msgid "Support the project"
@@ -6129,8 +6095,8 @@ msgid "The agent needs your input."
 msgstr "Nhân viên cần thông tin đầu vào từ bạn."
 
 #: src/features/settings/pages/api-keys.tsx
-msgid "The API documentation shows how to connect Reactive Resume to your own applications. It covers the endpoints, the request format, and authentication."
-msgstr "Tài liệu API cho thấy cách kết nối Reactive Resume với ứng dụng của riêng bạn. Nó bao gồm các điểm cuối, định dạng yêu cầu và xác thực."
+msgid "The API documentation shows how to connect Job4online to your own applications. It covers the endpoints, the request format, and authentication."
+msgstr ""
 
 #: src/features/settings/pages/api-keys.tsx
 msgid "The API key has been deleted."
@@ -6643,8 +6609,6 @@ msgid "Translate the app"
 msgstr "Dịch ứng dụng"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Translations"
 msgstr "Bản dịch"
 
@@ -7313,7 +7277,6 @@ msgid "Writing"
 msgstr "Văn phong"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "X (Twitter)"
 msgstr "X (Twitter)"
 
@@ -7553,4 +7516,3 @@ msgstr "Thu nhỏ"
 #: src/libs/locale.ts
 msgid "Zulu"
 msgstr "Zulu"
-

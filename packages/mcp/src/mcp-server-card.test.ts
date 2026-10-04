@@ -12,8 +12,8 @@ describe("buildMcpServerCard", () => {
 
 	it("identifies the server as reactive-resume", () => {
 		expect(card.serverInfo.name).toBe("reactive-resume");
-		expect(card.serverInfo.title).toBe("Reactive Resume");
-		expect(card.serverInfo.websiteUrl).toBe("https://rxresu.me");
+		expect(card.serverInfo.title).toBe("Job4online");
+		expect(card.serverInfo.websiteUrl).toBe("https://resume.job4online.com.au");
 	});
 
 	it("exposes light + dark theme icons", () => {

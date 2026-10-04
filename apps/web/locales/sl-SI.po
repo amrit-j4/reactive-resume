@@ -152,10 +152,6 @@ msgstr ""
 msgid "<0>Free forever and open source.</0><1/>No ads, paywalls, or tracking."
 msgstr "<0>Za vedno brezplačen in odprtokoden.</0><1/>Brez oglasov, plačljivih zidov ali sledenja."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "<0>Thank you for using Reactive Resume. I build this app mostly in my spare time, with help from open-source contributors around the world.</0><1>If it has been useful to you and you'd like to keep it free and open for everyone, please consider donating. Any amount helps.</1>"
-msgstr "<0>Hvala, ker uporabljate Reactive Resume. To aplikacijo razvijam večinoma v prostem času, s pomočjo odprtokodnih sodelavcev z vsega sveta.</0><1>Če vam je bila v pomoč in želite, da ostane brezplačna in odprta za vse, razmislite o donaciji. Pomaga vsak znesek.</1>"
-
 #: src/features/homepage/export-playground.tsx
 msgid "<p>I design software for teams, from early research to the details people use every day.</p>"
 msgstr "<p>Oblikujem programsko opremo za ekipe, od zgodnjih raziskav do podrobnosti, ki jih ljudje uporabljajo vsak dan.</p>"
@@ -279,10 +275,6 @@ msgstr "Stran je zasukana."
 #: src/features/homepage/site-footer.tsx
 msgid "A passion project by <0>Amruth Pillai</0>"
 msgstr "Projekt iz strasti avtorja <0>Amruth Pillai</0>"
-
-#: src/components/ui/copyright.tsx
-msgid "A passion project by <0>Amruth Pillai</0>."
-msgstr "Projekt iz strasti avtorja <0>Amruth Pillai</0>."
 
 #: src/features/homepage/page.tsx
 msgid "A PDF for the application. A Word file for a few more edits. Download a sample using your choices."
@@ -953,6 +945,10 @@ msgstr "Varnostne kode kopirane v odložišče."
 msgid "Base URL"
 msgstr "Osnovni URL"
 
+#: src/components/ui/copyright.tsx
+msgid "Based on <0>Reactive Resume</0> by <1>Amruth Pillai</1>."
+msgstr ""
+
 #: src/libs/resume/section.tsx
 msgid "Basics"
 msgstr "Osnove"
@@ -1031,8 +1027,6 @@ msgstr "Označen seznam"
 msgid "Bulleted list"
 msgstr "Seznam z oznakami"
 
-#. Tagline shown in app footer/about area
-#: src/components/ui/copyright.tsx
 #: src/features/homepage/site-footer.tsx
 msgid "By the community, for the community."
 msgstr "Od skupnosti, za skupnost."
@@ -1106,7 +1100,6 @@ msgid "Changed your mind? Rename your resume to something more descriptive."
 msgstr "Ste si premislili? Preimenujte svoj življenjepis v nekaj bolj opisa."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Changelog"
 msgstr "Dnevnik sprememb"
 
@@ -1294,7 +1287,6 @@ msgid "Command Palette - {currentPage}"
 msgstr "Paleta ukazov - {currentPage}"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Community"
 msgstr "Skupnost"
 
@@ -1405,8 +1397,8 @@ msgid "Continue where you left off"
 msgstr "Nadaljujte tam, kjer ste ostali"
 
 #: src/dialogs/resume/import.tsx
-msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, and JSON files from Reactive Resume or JSON Resume."
-msgstr "Nadaljujte, kjer ste ostali, tako da uvozite življenjepis, ki ste ga ustvarili v Reactive Resume ali drugem orodju. Podprti formati so PDF, Microsoft Word in datoteke JSON iz Reactive Resume ali JSON Resume."
+msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, a LinkedIn data export, and JSON files from Reactive Resume or JSON Resume."
+msgstr ""
 
 #: src/features/homepage/page.tsx
 msgid "Contribute code"
@@ -2072,7 +2064,6 @@ msgid "Disconnect"
 msgstr "Prekini povezavo"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Discord"
 msgstr "Discord"
 
@@ -2097,14 +2088,6 @@ msgstr "Poslani dokumenti"
 #: src/features/auth/pages/login.tsx
 msgid "Don't have an account? <0/>"
 msgstr "Nimate računa? <0/>"
-
-#: src/components/ui/donation-toast.tsx
-msgid "Donate"
-msgstr "Donirajte"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Donate to Reactive Resume"
-msgstr "Donirajte za Reactive Resume"
 
 #: src/routes/agent/-components/tool-part-card.tsx
 msgid "Done"
@@ -2883,7 +2866,6 @@ msgstr "Začni"
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "GitHub"
 msgstr "GitHub"
 
@@ -3300,6 +3282,19 @@ msgstr "Povezava do objave"
 msgid "Job search pipeline"
 msgstr "Potek iskanja zaposlitve"
 
+#: src/routes/_home/-sections/header.tsx
+msgid "Job4online - Go to homepage"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Job4online Job Board"
+msgstr ""
+
+#. App version label in footer; includes semantic version variable
+#: src/components/ui/copyright.tsx
+msgid "Job4online Resume Builder v<0>{__APP_VERSION__}</0>"
+msgstr ""
+
 #: src/features/command-palette/pages/navigation.tsx
 msgid "Jobs"
 msgstr "Zaposlitve"
@@ -3554,29 +3549,33 @@ msgid "Line Height"
 msgstr "Višina vrstice"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume (recommended)"
-msgstr "Poveži Reactive Resume (priporočeno)"
-
-#: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume to use AI match scoring and tailoring."
-msgstr "Povežite življenjepis iz Reactive Resume, da boste lahko uporabljali ocenjevanje ujemanja in prilagajanje z AI."
+msgid "Link a resume (recommended)"
+msgstr ""
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Link a resume and paste the job description (Edit) to score your fit and tailor a copy."
 msgstr "Povežite življenjepis in prilepite opis delovnega mesta (Uredi), da ocenite svoje ujemanje in prilagodite kopijo."
 
+#: src/features/applications/components/application-form-sheet.tsx
+msgid "Link a resume to use AI match scoring and tailoring."
+msgstr ""
+
 #: src/features/applications/components/application-detail-sheet.tsx
-msgid "Linked Reactive Resume"
-msgstr "Povezan reaktivni življenjepis"
+msgid "Linked resume"
+msgstr ""
 
 #. Authentication provider display name in account settings
 #. Brand name label for LinkedIn social sign-in button
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "LinkedIn"
 msgstr "LinkedIn"
+
+#. Import source option for a LinkedIn data export ZIP
+#: src/dialogs/resume/import.tsx
+msgid "LinkedIn (Data Export)"
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "LinkedIn, Referral…"
@@ -4218,7 +4217,6 @@ msgstr "Se odpre v novem zavihku"
 
 #: src/features/homepage/site-footer.tsx
 #: src/features/resume/stylesheet/editor.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "odpre se v novem zavihku"
 
@@ -4465,10 +4463,6 @@ msgstr "Navadno besedilo, za orodja AI in hitre popravke."
 msgid "Play data flow animation"
 msgstr "Predvajaj animacijo pretoka podatkov"
 
-#: src/components/ui/donation-toast.tsx
-msgid "Please support the project"
-msgstr "Prosim, podprite projekt"
-
 #: src/features/applications/components/file-attachment-field.tsx
 msgid "Please upload a PDF file."
 msgstr "Naložite datoteko PDF."
@@ -4695,10 +4689,6 @@ msgstr "Izvozite znova z vdelanimi pisavami, nato odprite datoteko in preverite,
 msgid "Re-score"
 msgstr "Ponovno oceni"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Reactive Resume - Go to homepage"
-msgstr "Reactive Resume - Pojdi na domačo stran"
-
 #. Import source option for current Reactive Resume JSON format
 #: src/dialogs/resume/import.tsx
 msgid "Reactive Resume (JSON)"
@@ -4707,15 +4697,6 @@ msgstr "Reaktivni življenjepis (JSON)"
 #: src/features/homepage/page.tsx
 msgid "Reactive Resume is free and open source. Amruth and a community of contributors keep it running. If you’d like to support the work, donations help cover hosting and development."
 msgstr "Reactive Resume je brezplačen in odprtokoden. Amruth in skupnost sodelavcev ga ohranjajo pri življenju. Če želite podpreti delo, donacije pomagajo kriti gostovanje in razvoj."
-
-#: src/components/ui/donation-toast.tsx
-msgid "Reactive Resume is free and open source. If it has helped you, please consider donating."
-msgstr "Reactive Resume je brezplačen in odprtokoden. Če vam je pomagal, prosimo, razmislite o donaciji."
-
-#. App version label in footer; includes semantic version variable
-#: src/components/ui/copyright.tsx
-msgid "Reactive Resume v<0>{__APP_VERSION__}</0>"
-msgstr "Reaktivni življenjepis v<0>{__APP_VERSION__}</0>"
 
 #. Import source option for legacy Reactive Resume v4 JSON format
 #: src/dialogs/resume/import.tsx
@@ -4925,12 +4906,7 @@ msgstr "Želite zamenjati priloženo spremno pismo?"
 msgid "Report a bug"
 msgstr "Prijavite napako"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Report a Bug"
-msgstr "Prijavite napako"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Report an issue"
 msgstr "Prijavi težavo"
 
@@ -5813,12 +5789,7 @@ msgstr "španščina"
 msgid "Spell the month, as in \"Mar 2022\"."
 msgstr "Mesec zapišite z besedo, na primer „Mar 2022“."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Sponsors"
-msgstr "Sponzorji"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Sponsorships"
 msgstr "Sponzorstva"
 
@@ -5950,7 +5921,6 @@ msgid "Styling and sender details refreshed from the selected resume."
 msgstr "Podrobnosti o slogu in pošiljatelju so osvežene iz izbranega življenjepisa."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Subreddit"
 msgstr "Podreddit"
 
@@ -5967,10 +5937,6 @@ msgstr "Predlogi"
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "Summary"
 msgstr "Povzetek"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Support the app by doing what you can!"
-msgstr "Podprite aplikacijo na kakršen koli način lahko!"
 
 #: src/features/homepage/page.tsx
 msgid "Support the project"
@@ -6129,8 +6095,8 @@ msgid "The agent needs your input."
 msgstr "Agent potrebuje vaše mnenje."
 
 #: src/features/settings/pages/api-keys.tsx
-msgid "The API documentation shows how to connect Reactive Resume to your own applications. It covers the endpoints, the request format, and authentication."
-msgstr "Dokumentacija API prikazuje, kako povezati Reactive Resume z lastnimi aplikacijami. Zajema končne točke, obliko zahtev in avtentikacijo."
+msgid "The API documentation shows how to connect Job4online to your own applications. It covers the endpoints, the request format, and authentication."
+msgstr ""
 
 #: src/features/settings/pages/api-keys.tsx
 msgid "The API key has been deleted."
@@ -6643,8 +6609,6 @@ msgid "Translate the app"
 msgstr "Prevedite aplikacijo"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Translations"
 msgstr "Prevodi"
 
@@ -7313,7 +7277,6 @@ msgid "Writing"
 msgstr "Besedilo"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "X (Twitter)"
 msgstr "X (Twitter)"
 
@@ -7553,4 +7516,3 @@ msgstr "Oddalji"
 #: src/libs/locale.ts
 msgid "Zulu"
 msgstr "Zuluščina"
-

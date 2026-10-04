@@ -34,6 +34,12 @@ describe("Copyright", () => {
 		expect(link.getAttribute("href")).toBe("https://amruthpillai.com");
 	});
 
+	it("credits Reactive Resume as the base project", () => {
+		renderCopyright();
+		const link = screen.getByRole("link", { name: "Reactive Resume" });
+		expect(link.getAttribute("href")).toBe("https://github.com/reactive-resume/reactive-resume");
+	});
+
 	it("includes the app version string", () => {
 		renderCopyright();
 		// The version is wrapped in <bdi> for RTL isolation, so it is its own text node.

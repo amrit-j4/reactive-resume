@@ -81,11 +81,11 @@ const healthResponseSchema = {
 export async function generateOpenApiSpec({ appUrl, version }: GenerateOpenApiSpecOptions) {
 	return await openAPIGenerator.generate(openAPIRouter, {
 		info: {
-			title: "Reactive Resume",
+			title: "Job4online",
 			version,
-			description: "Reactive Resume API",
+			description: "Job4online API",
 			license: { name: "MIT", url: "https://github.com/reactive-resume/reactive-resume/blob/main/LICENSE" },
-			contact: { name: "Amruth Pillai", email: "hello@amruthpillai.com", url: "https://amruthpillai.com" },
+			contact: { name: "Job4online", url: "https://job4online.com.au" },
 		},
 		servers: [{ url: `${appUrl}/api/openapi` }],
 		paths: {
@@ -110,7 +110,7 @@ export async function generateOpenApiSpec({ appUrl, version }: GenerateOpenApiSp
 				},
 			},
 		},
-		externalDocs: { url: "https://docs.rxresu.me", description: "Reactive Resume Documentation" },
+		externalDocs: { url: "https://docs.rxresu.me", description: "Reactive Resume Documentation (upstream)" },
 		commonSchemas: {
 			ResumeData: { schema: writableResumeDataSchema, strategy: "input" },
 		},

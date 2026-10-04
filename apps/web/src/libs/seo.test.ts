@@ -8,7 +8,7 @@ import {
 
 describe("getCanonicalRootUrl", () => {
 	it("uses the production root when no origin is available", () => {
-		expect(getCanonicalRootUrl()).toBe("https://rxresu.me/");
+		expect(getCanonicalRootUrl()).toBe("https://resume.job4online.com.au/");
 	});
 
 	it("normalizes an app origin to the root URL", () => {
@@ -53,12 +53,12 @@ describe("getRootStructuredData", () => {
 		expect(schemas).toHaveLength(4);
 		expect(schemas[0]).toMatchObject({
 			"@type": "WebSite",
-			name: "Reactive Resume",
+			name: "Job4online",
 			url: "https://rxresu.me/",
 		});
 		expect(schemas[1]).toMatchObject({
 			"@type": ["SoftwareApplication", "WebApplication"],
-			name: "Reactive Resume",
+			name: "Job4online",
 			applicationCategory: "BusinessApplication",
 			operatingSystem: "Web",
 			offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -67,7 +67,7 @@ describe("getRootStructuredData", () => {
 			"@type": "FAQPage",
 			mainEntity: expect.arrayContaining([
 				expect.objectContaining({
-					name: "Is Reactive Resume really free?",
+					name: "Is Job4online really free?",
 				}),
 			]),
 		});

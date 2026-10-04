@@ -27,22 +27,17 @@ const renderInfo = () =>
 	);
 
 describe("InformationSectionBuilder", () => {
-	it("renders the donation prompt and CTA", () => {
-		renderInfo();
-		expect(screen.getByText("Support the app by doing what you can!")).toBeInTheDocument();
-		expect(screen.getByText("Donate to Reactive Resume")).toBeInTheDocument();
+	it("does not show the upstream donation prompt or sponsor links", () => {
+		const { container } = renderInfo();
+		expect(screen.queryByText("Support the app by doing what you can!")).toBeNull();
+		expect(screen.queryByText("Sponsors")).toBeNull();
+		const hrefs = Array.from(container.querySelectorAll<HTMLAnchorElement>("a")).map((a) => a.href);
+		expect(hrefs.some((h) => h.includes("opencollective.com"))).toBe(false);
 	});
 
-	it("links to the OpenCollective donation page", () => {
+	it("includes external resource links (docs, source)", () => {
 		renderInfo();
-		const donateLink = screen.getByText("Donate to Reactive Resume").closest("a");
-		expect(donateLink?.getAttribute("href")).toBe("http://opencollective.com/reactive-resume");
-	});
-
-	it("includes external resource links (docs, source, bugs, translations, sponsors)", () => {
-		renderInfo();
-		const labels = ["Documentation", "Source Code", "Report a Bug", "Translations", "Sponsors"];
-		for (const label of labels) {
+		for (const label of ["Documentation", "Source Code"]) {
 			expect(screen.getByText(label).closest("a"), label).not.toBeNull();
 		}
 	});

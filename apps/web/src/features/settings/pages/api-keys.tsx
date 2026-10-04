@@ -79,8 +79,8 @@ export function ApiKeysSettingsPage() {
 
 					<p className="text-muted-foreground leading-relaxed">
 						<Trans>
-							The API documentation shows how to connect Reactive Resume to your own applications. It covers the
-							endpoints, the request format, and authentication.
+							The API documentation shows how to connect Job4online to your own applications. It covers the endpoints,
+							the request format, and authentication.
 						</Trans>
 					</p>
 

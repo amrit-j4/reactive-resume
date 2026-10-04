@@ -22,12 +22,17 @@ export function Copyright({ className, ...props }: Props) {
 			</p>
 
 			<p>
-				<Trans comment="Tagline shown in app footer/about area">By the community, for the community.</Trans>
-			</p>
-
-			<p>
 				<Trans>
-					A passion project by{" "}
+					Based on{" "}
+					<a
+						target="_blank"
+						rel="noopener noreferrer"
+						href="https://github.com/reactive-resume/reactive-resume"
+						className="font-medium underline underline-offset-2"
+					>
+						Reactive Resume
+					</a>{" "}
+					by{" "}
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
@@ -42,7 +47,7 @@ export function Copyright({ className, ...props }: Props) {
 
 			<p className="mt-4">
 				<Trans comment="App version label in footer; includes semantic version variable">
-					Reactive Resume v<bdi>{__APP_VERSION__}</bdi>
+					Job4online Resume Builder v<bdi>{__APP_VERSION__}</bdi>
 				</Trans>
 			</p>
 		</div>

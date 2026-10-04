@@ -1,9 +1,8 @@
 import { ORPCError } from "@orpc/client";
-import { ClientOnly, createFileRoute, lazyRouteComponent, redirect } from "@tanstack/react-router";
+import { ClientOnly, createFileRoute, lazyRouteComponent, Navigate, redirect } from "@tanstack/react-router";
 import { getResumeSocialMeta } from "@reactive-resume/resume/social-meta";
 import { LoadingScreen } from "@/components/layout/loading-screen";
 import { NotFoundScreen } from "@/components/layout/not-found-screen";
-import { Homepage } from "@/features/homepage/page";
 import { orpc } from "@/libs/orpc/client";
 import {
 	createNoindexFollowMeta,
@@ -31,14 +30,14 @@ export const Route = createFileRoute("/_home/")({
 			const { canonicalUrl } = root;
 			if (root.status === "unavailable") {
 				return {
-					meta: [{ title: "Reactive Resume" }, createNoindexFollowMeta()],
+					meta: [{ title: "Job4online" }, createNoindexFollowMeta()],
 					links: [{ rel: "canonical", href: canonicalUrl }],
 				};
 			}
 			const social = getResumeSocialMeta(root.resume.data, root.resume.name || "Resume");
 			return {
 				meta: [
-					{ title: `${social.name} - Reactive Resume` },
+					{ title: `${social.name} - Job4online` },
 					createNoindexFollowMeta(),
 					...createResumeSocialMeta({
 						canonicalUrl,
@@ -50,7 +49,7 @@ export const Route = createFileRoute("/_home/")({
 				links: [{ rel: "canonical", href: canonicalUrl }],
 			};
 		}
-		const appUrl = typeof window !== "undefined" ? window.location.origin : "https://rxresu.me";
+		const appUrl = typeof window !== "undefined" ? window.location.origin : "https://resume.job4online.com.au";
 		const canonicalUrl = getCanonicalRootUrl(appUrl);
 
 		return {
@@ -77,5 +76,6 @@ function RouteComponent() {
 		);
 	}
 
-	return <Homepage />;
+	// No marketing homepage: send visitors straight into the app (the dashboard handles sign-in).
+	return <Navigate to="/dashboard" replace />;
 }

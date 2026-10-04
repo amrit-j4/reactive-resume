@@ -67,35 +67,35 @@ const BASE_SECURITY_HEADERS = {
 		"default-src 'self'; img-src 'self' data: blob:; font-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; object-src 'none'",
 };
 
-const ROOT_TITLE = "Reactive Resume — A free and open-source resume builder";
+const ROOT_TITLE = "Job4online — A free and open-source resume builder";
 // Keep under ~120 characters so Google's mobile SERP snippet is not truncated at 3 lines.
 const ROOT_DESCRIPTION =
 	"Free, open-source resume builder. Create, update, and share your resume, with no ads and no paywall.";
 const ROOT_POSTER_PATH = "/videos/timelapse-v1.webp";
 const ROOT_FAQ_ITEMS = [
 	{
-		question: "Is Reactive Resume really free?",
+		question: "Is Job4online really free?",
 		answer:
-			"Yes. Reactive Resume is free to use, with no hidden costs, premium tiers, or subscription fees. It's open source, and it will stay free.",
+			"Yes. Job4online is free to use, with no hidden costs, premium tiers, or subscription fees. It's open source, and it will stay free.",
 	},
 	{
 		question: "How is my data protected?",
 		answer:
-			"Your data is stored securely and never shared with third parties. If you want full control over it, you can self-host Reactive Resume on your own servers.",
+			"Your data is stored securely and never shared with third parties. If you want full control over it, you can self-host Job4online on your own servers.",
 	},
 	{
 		question: "Can I export my resume to PDF?",
 		answer: "Yes. One click exports your resume to PDF, with your formatting and styling intact.",
 	},
 	{
-		question: "Is Reactive Resume available in multiple languages?",
+		question: "Is Job4online available in multiple languages?",
 		answer:
 			"Yes. Pick your language on the settings page, or with the language switcher in the top right corner. If your language is missing, or the existing translation could be better, you can contribute to the translations on Crowdin.",
 	},
 	{
-		question: "What makes Reactive Resume different from other resume builders?",
+		question: "What makes Job4online different from other resume builders?",
 		answer:
-			"Reactive Resume is open source, private, and free. It shows no ads, doesn't track what you do, and doesn't lock features behind a paywall.",
+			"Job4online is open source, private, and free. It shows no ads, doesn't track what you do, and doesn't lock features behind a paywall.",
 	},
 	{
 		question: "How do I share my resume?",
@@ -111,12 +111,12 @@ function createRootSeoMarkup(canonicalUrl: string) {
 		"@graph": [
 			{
 				"@type": "WebSite",
-				name: "Reactive Resume",
+				name: "Job4online",
 				url: canonicalUrl,
 			},
 			{
 				"@type": ["SoftwareApplication", "WebApplication"],
-				name: "Reactive Resume",
+				name: "Job4online",
 				url: canonicalUrl,
 				description: ROOT_DESCRIPTION,
 				applicationCategory: "BusinessApplication",
@@ -127,13 +127,13 @@ function createRootSeoMarkup(canonicalUrl: string) {
 					price: "0",
 					priceCurrency: "USD",
 				},
-				codeRepository: "https://github.com/reactive-resume/reactive-resume",
+				codeRepository: "https://github.com/amrit-j4/reactive-resume",
 			},
 			{
 				"@type": "Project",
-				name: "Reactive Resume",
+				name: "Job4online",
 				url: canonicalUrl,
-				sameAs: ["https://github.com/reactive-resume/reactive-resume"],
+				sameAs: ["https://github.com/amrit-j4/reactive-resume"],
 			},
 			{
 				"@type": "FAQPage",
@@ -153,7 +153,7 @@ function createRootSeoMarkup(canonicalUrl: string) {
 		<link rel="canonical" href="${canonicalUrl}">
 		<link rel="preload" href="${ROOT_POSTER_PATH}" as="image" fetchpriority="high">
 		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="Reactive Resume">
+		<meta property="og:site_name" content="Job4online">
 		<meta property="og:title" content="${ROOT_TITLE}">
 		<meta property="og:description" content="${ROOT_DESCRIPTION}">
 		<meta property="og:url" content="${canonicalUrl}">
@@ -166,7 +166,7 @@ function createRootSeoMarkup(canonicalUrl: string) {
 	`;
 }
 
-const ATS_CHECKER_TITLE = "ATS Checker - Reactive Resume";
+const ATS_CHECKER_TITLE = "ATS Checker - Job4online";
 // Keep under ~120 characters so Google's mobile SERP snippet is not truncated at 3 lines.
 const ATS_CHECKER_DESCRIPTION =
 	"Check whether software can read your resume PDF. Runs entirely in your browser, so your file is never uploaded.";
@@ -184,13 +184,13 @@ function createAtsCheckerSeoMarkup(origin: string) {
 		operatingSystem: "Web",
 		isAccessibleForFree: true,
 		offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-		isPartOf: { "@type": "WebSite", name: "Reactive Resume", url: `${origin}/` },
+		isPartOf: { "@type": "WebSite", name: "Job4online", url: `${origin}/` },
 	};
 
 	return `
 		<link rel="canonical" href="${canonicalUrl}">
 		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="Reactive Resume">
+		<meta property="og:site_name" content="Job4online">
 		<meta property="og:title" content="${ATS_CHECKER_TITLE}">
 		<meta property="og:description" content="${ATS_CHECKER_DESCRIPTION}">
 		<meta property="og:url" content="${canonicalUrl}">
@@ -225,7 +225,7 @@ async function createPublicResumeSeoMarkup(pathname: string, origin: string) {
 
 	const canonicalUrl = `${origin}/${username}/${slug}`;
 	const imageUrl = `${origin}/opengraph/banner.jpg`;
-	const pageTitle = escapeAttribute(`${meta.name} - Reactive Resume`);
+	const pageTitle = escapeAttribute(`${meta.name} - Job4online`);
 	const title = escapeAttribute(meta.title);
 	const description = escapeAttribute(meta.description);
 
@@ -235,7 +235,7 @@ async function createPublicResumeSeoMarkup(pathname: string, origin: string) {
 		markup: `
 		<link rel="canonical" href="${canonicalUrl}">
 		<meta property="og:type" content="profile">
-		<meta property="og:site_name" content="Reactive Resume">
+		<meta property="og:site_name" content="Job4online">
 		<meta property="og:title" content="${title}">
 		<meta property="og:description" content="${description}">
 		<meta property="og:url" content="${canonicalUrl}">
@@ -311,7 +311,7 @@ export async function handleWebApp(request: Request) {
 		// Root configuration never discloses a target in the HTML shell. The public API
 		// gates data and browser metadata; shell requests must not count extra views.
 		const shell = html
-			.replace(/<title>[^<]*<\/title>/, "<title>Reactive Resume</title>")
+			.replace(/<title>[^<]*<\/title>/, "<title>Job4online</title>")
 			.replace(/<meta\s+name="description"[^>]*>/, '<meta name="description" content="">');
 		const markup = `<link rel="canonical" href="${escapeAttribute(canonicalUrl)}" data-root-resume-shell><meta name="robots" content="noindex, follow" data-root-resume-shell>`;
 		return new Response(shell.replace("</head>", `${markup}</head>`), { headers });

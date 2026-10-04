@@ -152,10 +152,6 @@ msgstr ""
 msgid "<0>Free forever and open source.</0><1/>No ads, paywalls, or tracking."
 msgstr "<0>Visada nemokama ir atvirojo kodo.</0><1/>Be reklamų, mokamų sienų ar sekimo."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "<0>Thank you for using Reactive Resume. I build this app mostly in my spare time, with help from open-source contributors around the world.</0><1>If it has been useful to you and you'd like to keep it free and open for everyone, please consider donating. Any amount helps.</1>"
-msgstr "<0>Ačiū, kad naudojatės Reactive Resume. Šią programėlę kuriu daugiausia laisvalaikiu, padedamas atvirojo kodo bendraautorių iš viso pasaulio.</0><1>Jei ji jums pravertė ir norite, kad liktų nemokama bei atvira visiems, apsvarstykite galimybę paaukoti. Padeda bet kokia suma.</1>"
-
 #: src/features/homepage/export-playground.tsx
 msgid "<p>I design software for teams, from early research to the details people use every day.</p>"
 msgstr "<p>Kuriu komandoms skirtą programinę įrangą – nuo ankstyvų tyrimų iki detalių, kuriomis žmonės naudojasi kasdien.</p>"
@@ -279,10 +275,6 @@ msgstr "Puslapis yra pasuktas."
 #: src/features/homepage/site-footer.tsx
 msgid "A passion project by <0>Amruth Pillai</0>"
 msgstr "Aistros projektas, kurį sukūrė <0>Amruth Pillai</0>"
-
-#: src/components/ui/copyright.tsx
-msgid "A passion project by <0>Amruth Pillai</0>."
-msgstr "Aistros projektas, kurį sukūrė <0>Amruth Pillai</0>."
 
 #: src/features/homepage/page.tsx
 msgid "A PDF for the application. A Word file for a few more edits. Download a sample using your choices."
@@ -953,6 +945,10 @@ msgstr "Atsarginiai kodai nukopijuoti į iškarpinę."
 msgid "Base URL"
 msgstr "Bazinis URL"
 
+#: src/components/ui/copyright.tsx
+msgid "Based on <0>Reactive Resume</0> by <1>Amruth Pillai</1>."
+msgstr ""
+
 #: src/libs/resume/section.tsx
 msgid "Basics"
 msgstr "Pagrindai"
@@ -1031,8 +1027,6 @@ msgstr "Suženklintas sąrašas"
 msgid "Bulleted list"
 msgstr "Sąrašas su ženkleliais"
 
-#. Tagline shown in app footer/about area
-#: src/components/ui/copyright.tsx
 #: src/features/homepage/site-footer.tsx
 msgid "By the community, for the community."
 msgstr "Bendruomenės ir bendruomenei."
@@ -1106,7 +1100,6 @@ msgid "Changed your mind? Rename your resume to something more descriptive."
 msgstr "Persigalvojote? Pervardinkite savo gyvenimo aprašymą į apibūdinantį pavadinimą."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Changelog"
 msgstr "Pakeitimų žurnalas"
 
@@ -1294,7 +1287,6 @@ msgid "Command Palette - {currentPage}"
 msgstr "Komandų paletė - {currentPage}"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Community"
 msgstr "Bendruomenė"
 
@@ -1405,8 +1397,8 @@ msgid "Continue where you left off"
 msgstr "Tęskite nuo ten, kur sustojote"
 
 #: src/dialogs/resume/import.tsx
-msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, and JSON files from Reactive Resume or JSON Resume."
-msgstr "Tęskite ten, kur baigėte – importuokite gyvenimo aprašymą, sukurtą Reactive Resume ar kitoje priemonėje. Palaikomi formatai: PDF, Microsoft Word ir JSON failai iš Reactive Resume ar JSON Resume."
+msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, a LinkedIn data export, and JSON files from Reactive Resume or JSON Resume."
+msgstr ""
 
 #: src/features/homepage/page.tsx
 msgid "Contribute code"
@@ -2072,7 +2064,6 @@ msgid "Disconnect"
 msgstr "Atsijungti"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Discord"
 msgstr "Discord"
 
@@ -2097,14 +2088,6 @@ msgstr "Išsiųsti dokumentai"
 #: src/features/auth/pages/login.tsx
 msgid "Don't have an account? <0/>"
 msgstr "Neturite paskyros? <0/>"
-
-#: src/components/ui/donation-toast.tsx
-msgid "Donate"
-msgstr "Paaukoti"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Donate to Reactive Resume"
-msgstr "Paaukoti „Reactive Resume“"
 
 #: src/routes/agent/-components/tool-part-card.tsx
 msgid "Done"
@@ -2883,7 +2866,6 @@ msgstr "Pradėkite"
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "GitHub"
 msgstr "\"GitHub\""
 
@@ -3300,6 +3282,19 @@ msgstr "Darbo skelbimo nuoroda"
 msgid "Job search pipeline"
 msgstr "Darbo paieškos eiga"
 
+#: src/routes/_home/-sections/header.tsx
+msgid "Job4online - Go to homepage"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Job4online Job Board"
+msgstr ""
+
+#. App version label in footer; includes semantic version variable
+#: src/components/ui/copyright.tsx
+msgid "Job4online Resume Builder v<0>{__APP_VERSION__}</0>"
+msgstr ""
+
 #: src/features/command-palette/pages/navigation.tsx
 msgid "Jobs"
 msgstr "Darbai"
@@ -3554,29 +3549,33 @@ msgid "Line Height"
 msgstr "Tarpueilio aukštis"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume (recommended)"
-msgstr "Susieti Reactive Resume (rekomenduojama)"
-
-#: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume to use AI match scoring and tailoring."
-msgstr "Susiekite Reactive Resume gyvenimo aprašymą, kad galėtumėte naudoti AI atitikties vertinimą ir pritaikymą."
+msgid "Link a resume (recommended)"
+msgstr ""
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Link a resume and paste the job description (Edit) to score your fit and tailor a copy."
 msgstr "Susiekite gyvenimo aprašymą ir įklijuokite darbo aprašymą (Redaguoti), kad įvertintumėte atitiktį ir pritaikytumėte kopiją."
 
+#: src/features/applications/components/application-form-sheet.tsx
+msgid "Link a resume to use AI match scoring and tailoring."
+msgstr ""
+
 #: src/features/applications/components/application-detail-sheet.tsx
-msgid "Linked Reactive Resume"
-msgstr "Susietas Reactive Resume"
+msgid "Linked resume"
+msgstr ""
 
 #. Authentication provider display name in account settings
 #. Brand name label for LinkedIn social sign-in button
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "LinkedIn"
 msgstr "LinkedIn"
+
+#. Import source option for a LinkedIn data export ZIP
+#: src/dialogs/resume/import.tsx
+msgid "LinkedIn (Data Export)"
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "LinkedIn, Referral…"
@@ -4218,7 +4217,6 @@ msgstr "Atidaroma naujame skirtuke"
 
 #: src/features/homepage/site-footer.tsx
 #: src/features/resume/stylesheet/editor.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "atidaro naujame skirtuke"
 
@@ -4465,10 +4463,6 @@ msgstr "Grynasis tekstas, skirtas AI įrankiams ir greitiems taisymams."
 msgid "Play data flow animation"
 msgstr "Paleisti duomenų srauto animaciją"
 
-#: src/components/ui/donation-toast.tsx
-msgid "Please support the project"
-msgstr "Prašome paremti projektą"
-
 #: src/features/applications/components/file-attachment-field.tsx
 msgid "Please upload a PDF file."
 msgstr "Įkelkite PDF failą."
@@ -4695,10 +4689,6 @@ msgstr "Eksportuokite iš naujo su įterptais šriftais, tada atidarykite failą
 msgid "Re-score"
 msgstr "Vertinti iš naujo"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Reactive Resume - Go to homepage"
-msgstr "„Reactive Resume“ – eiti į pagrindinį puslapį"
-
 #. Import source option for current Reactive Resume JSON format
 #: src/dialogs/resume/import.tsx
 msgid "Reactive Resume (JSON)"
@@ -4707,15 +4697,6 @@ msgstr "Reaktyvusis CV (JSON)"
 #: src/features/homepage/page.tsx
 msgid "Reactive Resume is free and open source. Amruth and a community of contributors keep it running. If you’d like to support the work, donations help cover hosting and development."
 msgstr "Reactive Resume yra nemokama ir atvirojo kodo programėlė. Amruth ir bendradarbių bendruomenė palaiko jos veikimą. Jei norite paremti šį darbą, aukos padeda padengti prieglobos ir kūrimo išlaidas."
-
-#: src/components/ui/donation-toast.tsx
-msgid "Reactive Resume is free and open source. If it has helped you, please consider donating."
-msgstr "„Reactive Resume“ yra nemokamas ir atvirojo kodo. Jei jis jums padėjo, apsvarstykite galimybę paaukoti."
-
-#. App version label in footer; includes semantic version variable
-#: src/components/ui/copyright.tsx
-msgid "Reactive Resume v<0>{__APP_VERSION__}</0>"
-msgstr "Reaktyvus gyvenimo aprašymas v<0>{__APP_VERSION__}</0>"
 
 #. Import source option for legacy Reactive Resume v4 JSON format
 #: src/dialogs/resume/import.tsx
@@ -4925,12 +4906,7 @@ msgstr "Pakeisti pridedamą motyvacinį laišką?"
 msgid "Report a bug"
 msgstr "Pranešti apie klaidą"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Report a Bug"
-msgstr "Pranešti apie klaidą"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Report an issue"
 msgstr "Pranešti apie problemą"
 
@@ -5813,12 +5789,7 @@ msgstr "Ispanų"
 msgid "Spell the month, as in \"Mar 2022\"."
 msgstr "Mėnesį rašykite žodžiu, pvz., „Mar 2022“."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Sponsors"
-msgstr "Rėmėjai"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Sponsorships"
 msgstr "Rėmimas"
 
@@ -5950,7 +5921,6 @@ msgid "Styling and sender details refreshed from the selected resume."
 msgstr "Stiliaus ir siuntėjo informacija atnaujinta iš pasirinkto gyvenimo aprašymo."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Subreddit"
 msgstr "Subreditas"
 
@@ -5967,10 +5937,6 @@ msgstr "Pasiūlymai"
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "Summary"
 msgstr "Santrauka"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Support the app by doing what you can!"
-msgstr "Palaikykite programėlę darydami tai, ką galite!"
 
 #: src/features/homepage/page.tsx
 msgid "Support the project"
@@ -6129,8 +6095,8 @@ msgid "The agent needs your input."
 msgstr "Agentui reikia jūsų indėlio."
 
 #: src/features/settings/pages/api-keys.tsx
-msgid "The API documentation shows how to connect Reactive Resume to your own applications. It covers the endpoints, the request format, and authentication."
-msgstr "API dokumentacija parodo, kaip prijungti Reactive Resume prie savo programų. Joje aprašomos galinės grandys, užklausų formatas ir autentifikavimas."
+msgid "The API documentation shows how to connect Job4online to your own applications. It covers the endpoints, the request format, and authentication."
+msgstr ""
 
 #: src/features/settings/pages/api-keys.tsx
 msgid "The API key has been deleted."
@@ -6643,8 +6609,6 @@ msgid "Translate the app"
 msgstr "Išverskite programėlę"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Translations"
 msgstr "Vertimai"
 
@@ -7313,7 +7277,6 @@ msgid "Writing"
 msgstr "Tekstas"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "X (Twitter)"
 msgstr "X (Twitter)"
 
@@ -7553,4 +7516,3 @@ msgstr "Tolinti"
 #: src/libs/locale.ts
 msgid "Zulu"
 msgstr "Zulų"
-

@@ -27,7 +27,6 @@ export function handleRobots(options?: StaticSeoOptions) {
 		"Disallow: /.well-known",
 		"",
 		`Sitemap: ${baseUrl}/sitemap.xml`,
-		`Sitemap: ${DOCS_URL}/sitemap.xml`,
 		"",
 	].join("\n");
 
@@ -57,9 +56,9 @@ export function handleSitemap(options?: StaticSeoOptions) {
 export function handleLlms(options?: StaticSeoOptions) {
 	const baseUrl = appUrl();
 	const body = [
-		"# Reactive Resume",
+		"# Job4online",
 		"",
-		"Reactive Resume is an open-source resume builder for creating, managing, and exporting resumes.",
+		"Job4online is an open-source resume builder for creating, managing, and exporting resumes.",
 		"",
 		"## Links",
 		"",

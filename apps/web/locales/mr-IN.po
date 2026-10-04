@@ -152,10 +152,6 @@ msgstr ""
 msgid "<0>Free forever and open source.</0><1/>No ads, paywalls, or tracking."
 msgstr "<0>नेहमी मोफत आणि मुक्त स्रोत.</0><1/>जाहिराती, पेवॉल किंवा मागोवा नाही."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "<0>Thank you for using Reactive Resume. I build this app mostly in my spare time, with help from open-source contributors around the world.</0><1>If it has been useful to you and you'd like to keep it free and open for everyone, please consider donating. Any amount helps.</1>"
-msgstr "<0>Reactive Resume वापरल्याबद्दल धन्यवाद. हे ॲप मी बहुतेकदा माझ्या मोकळ्या वेळात बनवतो, जगभरातील मुक्त-स्रोत योगदानकर्त्यांच्या मदतीने.</0><1>ते तुमच्या उपयोगी पडले असेल आणि ते सर्वांसाठी मोफत व खुले राहावे असे तुम्हाला वाटत असेल, तर कृपया देणगी देण्याचा विचार करा. कोणतीही रक्कम मदत करते.</1>"
-
 #: src/features/homepage/export-playground.tsx
 msgid "<p>I design software for teams, from early research to the details people use every day.</p>"
 msgstr "<p>मी संघांसाठी सॉफ्टवेअर डिझाइन करतो, सुरुवातीच्या संशोधनापासून लोक रोज वापरतात त्या तपशीलांपर्यंत.</p>"
@@ -279,10 +275,6 @@ msgstr "एक पान फिरवलेले आहे."
 #: src/features/homepage/site-footer.tsx
 msgid "A passion project by <0>Amruth Pillai</0>"
 msgstr "<0>Amruth Pillai</0> यांचा प्रचंड आवडीचा प्रकल्प"
-
-#: src/components/ui/copyright.tsx
-msgid "A passion project by <0>Amruth Pillai</0>."
-msgstr "<0>Amruth Pillai</0> यांचा प्रचंड आवडीचा प्रकल्प."
 
 #: src/features/homepage/page.tsx
 msgid "A PDF for the application. A Word file for a few more edits. Download a sample using your choices."
@@ -953,6 +945,10 @@ msgstr "बॅकअप कोड्स क्लिपबोर्डवर क
 msgid "Base URL"
 msgstr "बेस यूआरएल"
 
+#: src/components/ui/copyright.tsx
+msgid "Based on <0>Reactive Resume</0> by <1>Amruth Pillai</1>."
+msgstr ""
+
 #: src/libs/resume/section.tsx
 msgid "Basics"
 msgstr "मूलभूत"
@@ -1031,8 +1027,6 @@ msgstr "बुलेट यादी"
 msgid "Bulleted list"
 msgstr "बुलेट केलेली यादी"
 
-#. Tagline shown in app footer/about area
-#: src/components/ui/copyright.tsx
 #: src/features/homepage/site-footer.tsx
 msgid "By the community, for the community."
 msgstr "समुदायाकडून, समुदायासाठी."
@@ -1106,7 +1100,6 @@ msgid "Changed your mind? Rename your resume to something more descriptive."
 msgstr "मत बदलले आहे का? तुमच्या रेझ्युमेला अधिक वर्णनात्मक असे नवीन नाव द्या."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Changelog"
 msgstr "बदलांचा इतिहास"
 
@@ -1294,7 +1287,6 @@ msgid "Command Palette - {currentPage}"
 msgstr "आदेश पॅलेट - {currentPage}"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Community"
 msgstr "कम्युनिटी"
 
@@ -1405,8 +1397,8 @@ msgid "Continue where you left off"
 msgstr "जिथे थांबला होतात तिथूनच सुरू करा"
 
 #: src/dialogs/resume/import.tsx
-msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, and JSON files from Reactive Resume or JSON Resume."
-msgstr "Reactive Resume किंवा दुसऱ्या रेझ्युमे बिल्डरमध्ये तयार केलेला रेझ्युमे आयात करून जिथे थांबला होता तिथून पुढे सुरू करा. समर्थित स्वरूपे आहेत PDF, Microsoft Word, आणि Reactive Resume किंवा JSON Resume च्या JSON फाइल्स."
+msgid "Continue where you left off by importing a resume you built in Reactive Resume or another resume builder. Supported formats are PDF, Microsoft Word, a LinkedIn data export, and JSON files from Reactive Resume or JSON Resume."
+msgstr ""
 
 #: src/features/homepage/page.tsx
 msgid "Contribute code"
@@ -2072,7 +2064,6 @@ msgid "Disconnect"
 msgstr "डिस्कनेक्ट"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Discord"
 msgstr "डिस्कॉर्ड"
 
@@ -2097,14 +2088,6 @@ msgstr "कागदपत्रे पाठवली"
 #: src/features/auth/pages/login.tsx
 msgid "Don't have an account? <0/>"
 msgstr "खाते नाही? <0/>"
-
-#: src/components/ui/donation-toast.tsx
-msgid "Donate"
-msgstr "दान करा"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Donate to Reactive Resume"
-msgstr "रिअ‍ॅक्टिव्ह रेझ्युमेला दान करा"
 
 #: src/routes/agent/-components/tool-part-card.tsx
 msgid "Done"
@@ -2883,7 +2866,6 @@ msgstr "सुरुवात करा"
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "GitHub"
 msgstr "गिटहब"
 
@@ -3300,6 +3282,19 @@ msgstr "जॉब पोस्टिंग लिंक"
 msgid "Job search pipeline"
 msgstr "नोकरी शोध पाइपलाइन"
 
+#: src/routes/_home/-sections/header.tsx
+msgid "Job4online - Go to homepage"
+msgstr ""
+
+#: src/routes/_home/-sections/footer.tsx
+msgid "Job4online Job Board"
+msgstr ""
+
+#. App version label in footer; includes semantic version variable
+#: src/components/ui/copyright.tsx
+msgid "Job4online Resume Builder v<0>{__APP_VERSION__}</0>"
+msgstr ""
+
 #: src/features/command-palette/pages/navigation.tsx
 msgid "Jobs"
 msgstr "नोकऱ्या"
@@ -3554,29 +3549,33 @@ msgid "Line Height"
 msgstr "रेषेची उंची"
 
 #: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume (recommended)"
-msgstr "Reactive Resume लिंक करा (शिफारस केलेले)"
-
-#: src/features/applications/components/application-form-sheet.tsx
-msgid "Link a Reactive Resume to use AI match scoring and tailoring."
-msgstr "AI जुळणी स्कोअरिंग आणि अनुकूलनासाठी एखादा Reactive Resume लिंक करा."
+msgid "Link a resume (recommended)"
+msgstr ""
 
 #: src/features/applications/components/application-ai-copilot.tsx
 msgid "Link a resume and paste the job description (Edit) to score your fit and tailor a copy."
 msgstr "तुमची जुळणी तपासण्यासाठी आणि सानुकूल प्रत तयार करण्यासाठी रेझ्युमे जोडा आणि नोकरीचे वर्णन पेस्ट करा (संपादन करा)."
 
+#: src/features/applications/components/application-form-sheet.tsx
+msgid "Link a resume to use AI match scoring and tailoring."
+msgstr ""
+
 #: src/features/applications/components/application-detail-sheet.tsx
-msgid "Linked Reactive Resume"
-msgstr "लिंक केलेले Reactive Resume"
+msgid "Linked resume"
+msgstr ""
 
 #. Authentication provider display name in account settings
 #. Brand name label for LinkedIn social sign-in button
 #: src/features/auth/components/social-auth.tsx
 #: src/features/homepage/site-footer.tsx
 #: src/features/settings/authentication/components/hooks.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "LinkedIn"
 msgstr "लिंक्डइन"
+
+#. Import source option for a LinkedIn data export ZIP
+#: src/dialogs/resume/import.tsx
+msgid "LinkedIn (Data Export)"
+msgstr ""
 
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "LinkedIn, Referral…"
@@ -4218,7 +4217,6 @@ msgstr "नवीन टॅबमध्ये उघडते"
 
 #: src/features/homepage/site-footer.tsx
 #: src/features/resume/stylesheet/editor.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "opens in new tab"
 msgstr "नवीन टॅबमध्ये उघडतो"
 
@@ -4465,10 +4463,6 @@ msgstr "साधा मजकूर, AI साधनांसाठी आण�
 msgid "Play data flow animation"
 msgstr "डेटा प्रवाह अॅनिमेशन चालवा"
 
-#: src/components/ui/donation-toast.tsx
-msgid "Please support the project"
-msgstr "कृपया प्रकल्पाला पाठिंबा द्या"
-
 #: src/features/applications/components/file-attachment-field.tsx
 msgid "Please upload a PDF file."
 msgstr "कृपया PDF फाइल अपलोड करा."
@@ -4695,10 +4689,6 @@ msgstr "फाँट्स एम्बेड करून पुन्हा �
 msgid "Re-score"
 msgstr "री-स्कोअर"
 
-#: src/routes/_home/-sections/header.tsx
-msgid "Reactive Resume - Go to homepage"
-msgstr "Reactive Resume - मुखपृष्ठावर जा"
-
 #. Import source option for current Reactive Resume JSON format
 #: src/dialogs/resume/import.tsx
 msgid "Reactive Resume (JSON)"
@@ -4707,15 +4697,6 @@ msgstr "प्रतिक्रियाशील बायोडाटा (JSO
 #: src/features/homepage/page.tsx
 msgid "Reactive Resume is free and open source. Amruth and a community of contributors keep it running. If you’d like to support the work, donations help cover hosting and development."
 msgstr "Reactive Resume मोफत आणि मुक्त स्रोत आहे. Amruth आणि योगदान देणाऱ्यांचा समुदाय ते चालू ठेवतात. तुम्हाला या कामाला पाठिंबा द्यायचा असेल, तर देणग्या होस्टिंग आणि विकासाचा खर्च भागवण्यास मदत करतात."
-
-#: src/components/ui/donation-toast.tsx
-msgid "Reactive Resume is free and open source. If it has helped you, please consider donating."
-msgstr "रिॲक्टिव्ह रिझ्युमे मोफत आणि ओपन सोर्स आहे. जर तुम्हाला याचा उपयोग झाला असेल, तर कृपया देणगी देण्याचा विचार करा."
-
-#. App version label in footer; includes semantic version variable
-#: src/components/ui/copyright.tsx
-msgid "Reactive Resume v<0>{__APP_VERSION__}</0>"
-msgstr "रिॲक्टिव्ह रिझ्युमे v<0>{__APP_VERSION__}</0>"
 
 #. Import source option for legacy Reactive Resume v4 JSON format
 #: src/dialogs/resume/import.tsx
@@ -4925,12 +4906,7 @@ msgstr "संलग्न कव्हर लेटर बदला?"
 msgid "Report a bug"
 msgstr "बग कळवा"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Report a Bug"
-msgstr "बग कळवा"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Report an issue"
 msgstr "समस्या अहवाल द्या"
 
@@ -5813,12 +5789,7 @@ msgstr "स्पॅनिश"
 msgid "Spell the month, as in \"Mar 2022\"."
 msgstr "\"Mar 2022\" प्रमाणे महिना शब्दांत लिहा."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Sponsors"
-msgstr "प्रायोजक"
-
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Sponsorships"
 msgstr "प्रायोजकत्वे"
 
@@ -5950,7 +5921,6 @@ msgid "Styling and sender details refreshed from the selected resume."
 msgstr "निवडलेल्या रिझ्युमेमधून शैली आणि प्रेषक तपशील अद्ययावत केले गेले आहेत."
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "Subreddit"
 msgstr "सबरेडिट"
 
@@ -5967,10 +5937,6 @@ msgstr "सुचवणी"
 #: src/routes/builder/$resumeId/-sidebar/left/sections/custom.tsx
 msgid "Summary"
 msgstr "सारांश"
-
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
-msgid "Support the app by doing what you can!"
-msgstr "जमेल ते करून या अ‍ॅपचे समर्थन करा!"
 
 #: src/features/homepage/page.tsx
 msgid "Support the project"
@@ -6129,8 +6095,8 @@ msgid "The agent needs your input."
 msgstr "एजंटला तुमच्या माहितीची आवश्यकता आहे."
 
 #: src/features/settings/pages/api-keys.tsx
-msgid "The API documentation shows how to connect Reactive Resume to your own applications. It covers the endpoints, the request format, and authentication."
-msgstr "API दस्तऐवजीकरण Reactive Resume तुमच्या स्वतःच्या ॲप्लिकेशन्सशी कसे जोडायचे ते दाखवते. त्यात एंडपॉइंट्स, विनंतीचे स्वरूप आणि ओथेंटिकेशन यांचा समावेश आहे."
+msgid "The API documentation shows how to connect Job4online to your own applications. It covers the endpoints, the request format, and authentication."
+msgstr ""
 
 #: src/features/settings/pages/api-keys.tsx
 msgid "The API key has been deleted."
@@ -6643,8 +6609,6 @@ msgid "Translate the app"
 msgstr "अॅप अनुवाद करा"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
-#: src/routes/builder/$resumeId/-sidebar/right/sections/information.tsx
 msgid "Translations"
 msgstr "भाषांतरे"
 
@@ -7313,7 +7277,6 @@ msgid "Writing"
 msgstr "लेखन"
 
 #: src/features/homepage/site-footer.tsx
-#: src/routes/_home/-sections/footer.tsx
 msgid "X (Twitter)"
 msgstr "एक्स (ट्विटर)"
 
@@ -7553,4 +7516,3 @@ msgstr "बाहेर झूम करा"
 #: src/libs/locale.ts
 msgid "Zulu"
 msgstr "झुलू"
-

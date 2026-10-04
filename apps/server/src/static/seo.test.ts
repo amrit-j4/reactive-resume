@@ -22,7 +22,7 @@ describe("SEO static endpoints", () => {
 		expect(text).toContain("Disallow: /mcp");
 		expect(text).toContain("Disallow: /.well-known");
 		expect(text).toContain("Sitemap: https://app.example.com/sitemap.xml");
-		expect(text).toContain("Sitemap: https://docs.rxresu.me/sitemap.xml");
+		expect(text).not.toContain("docs.rxresu.me/sitemap.xml");
 		expect(text).not.toMatch(/GPTBot|ClaudeBot|PerplexityBot|CCBot|ChatGPT-User/);
 	});
 
@@ -48,7 +48,7 @@ describe("SEO static endpoints", () => {
 
 		expect(response.status).toBe(200);
 		expect(response.headers.get("Content-Type")).toBe("text/plain; charset=UTF-8");
-		expect(text).toContain("# Reactive Resume");
+		expect(text).toContain("# Job4online");
 		expect(text).toContain("- Product: https://app.example.com");
 		expect(text).toContain("- Documentation: https://docs.rxresu.me");
 		expect(text).toContain("- Documentation sitemap: https://docs.rxresu.me/sitemap.xml");
