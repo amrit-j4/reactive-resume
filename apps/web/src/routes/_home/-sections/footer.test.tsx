@@ -1,11 +1,9 @@
 // @vitest-environment happy-dom
 
 import { render, screen } from "@testing-library/react";
-import { describe, expect, it, vi } from "vitest";
+import { describe, expect, it } from "vitest";
 import { i18n } from "@lingui/core";
 import { I18nProvider } from "@lingui/react";
-
-vi.stubGlobal("__APP_VERSION__", "9.9.9");
 
 // The footer module evaluates translated link labels at module scope. That `t` call needs an activated locale BEFORE the import, so do that
 // here instead of in beforeAll.
@@ -51,9 +49,8 @@ describe("Footer", () => {
 		}
 	});
 
-	it("includes Job4online version copy via Copyright", () => {
-		renderFooter();
-		// The version is wrapped in <bdi> for RTL isolation, so it is its own text node.
-		expect(screen.getByText("9.9.9")).toBeInTheDocument();
+	it("does not show a licence or attribution block", () => {
+		const { container } = renderFooter();
+		expect(container.textContent).not.toMatch(/Licensed under|Based on|Amruth/);
 	});
 });

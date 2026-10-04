@@ -2,7 +2,6 @@ import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { m } from "motion/react";
 import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
-import { Copyright } from "@/components/ui/copyright";
 import { EASE_OUT_STRONG } from "@/libs/motion";
 
 type FooterLinkItem = {
@@ -31,7 +30,7 @@ export function Footer() {
 			viewport={{ once: true }}
 			transition={{ duration: 0.45, ease: EASE_OUT_STRONG }}
 		>
-			<div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+			<div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
 				{/* Brand Column */}
 				<div className="space-y-4 sm:col-span-2 lg:col-span-1">
 					<BrandIcon variant="logo" className="size-10" />
@@ -48,11 +47,6 @@ export function Footer() {
 
 				{/* Resources Column */}
 				<FooterLinkGroup title={t`Resources`} links={getResourceLinks()} />
-
-				{/* Copyright Column */}
-				<div className="space-y-4 sm:col-span-2 lg:col-span-1">
-					<Copyright />
-				</div>
 			</div>
 		</m.footer>
 	);
