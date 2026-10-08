@@ -84,11 +84,11 @@ const resolutionError: SemanticCssDiagnostic = {
 
 const guideName = /read the applying custom styles guide.*opens in new tab/i;
 
-const expectGuideLink = (root: HTMLElement) => {
-	const link = within(root).getByRole("link", { name: guideName });
-	expect(link).toHaveAttribute("href", "https://docs.rxresu.me/applying-custom-styles");
-	expect(link).toHaveAttribute("target", "_blank");
-	expect(link).toHaveAttribute("rel", "noopener noreferrer");
+// The editor must not point at the upstream project's documentation
+const expectNoGuideLink = (root: HTMLElement) => {
+	expect(within(root).queryByRole("link", { name: guideName })).toBeNull();
+	const hrefs = Array.from(root.querySelectorAll("a")).map((a) => a.getAttribute("href") ?? "");
+	expect(hrefs.some((href) => href.includes("rxresu.me"))).toBe(false);
 };
 
 beforeAll(() => {
@@ -327,7 +327,7 @@ describe("StylesheetCodeEditor", () => {
 });
 
 describe("StylesheetEditorShell", () => {
-	it("links desktop editor help to the Semantic CSS language reference", () => {
+	it("does not link the desktop editor to the upstream documentation", () => {
 		media.mobile = false;
 		const { container } = render(
 			<I18nProvider i18n={i18n}>
@@ -337,7 +337,7 @@ describe("StylesheetEditorShell", () => {
 			</I18nProvider>,
 		);
 
-		expectGuideLink(container);
+		expectNoGuideLink(container);
 	});
 
 	it("has no apply or save action for an already-semantic stylesheet", async () => {
@@ -477,7 +477,7 @@ describe("StylesheetEditorShell", () => {
 		expect(within(sheet).getByRole("button", { name: "Activate Semantic CSS" })).toBeInTheDocument();
 		expect(within(sheet).getByRole("toolbar", { name: "Stylesheet editor" })).toBeInTheDocument();
 		await within(sheet).findByText("Ready to activate");
-		expectGuideLink(sheet);
+		expectNoGuideLink(sheet);
 		expect(document.querySelectorAll(".cm-editor")).toHaveLength(1);
 		media.mobile = false;
 	});

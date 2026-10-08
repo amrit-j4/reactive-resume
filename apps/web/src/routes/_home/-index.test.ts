@@ -9,8 +9,6 @@ vi.mock("@tanstack/react-router", () => ({
 vi.mock("@/libs/orpc/client", () => ({
 	orpc: { resume: { getRoot: { queryOptions: () => ({ queryKey: ["root"] }) } } },
 }));
-// The homepage component is unrelated to the loader/head boundary under test.
-vi.mock("@/features/homepage/page", () => ({ Homepage: () => null }));
 const { Route } = await import("./index");
 
 describe("home root mode", () => {

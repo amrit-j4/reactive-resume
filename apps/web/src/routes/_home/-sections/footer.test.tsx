@@ -27,7 +27,7 @@ describe("Footer", () => {
 	it("renders the resource links", () => {
 		const { container } = renderFooter();
 		const text = container.textContent ?? "";
-		for (const label of ["Job4online Job Board", "Documentation", "Source Code"]) {
+		for (const label of ["Job4online Job Board", "Source Code"]) {
 			expect(text, label).toContain(label);
 		}
 	});

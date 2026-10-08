@@ -79,8 +79,8 @@ export function ApiKeysSettingsPage() {
 
 					<p className="text-muted-foreground leading-relaxed">
 						<Trans>
-							The API documentation shows how to connect Job4online to your own applications. It covers the endpoints,
-							the request format, and authentication.
+							The OpenAPI specification shows how to connect Job4online to your own applications. It covers the
+							endpoints, the request format, and authentication.
 						</Trans>
 					</p>
 
@@ -88,9 +88,9 @@ export function ApiKeysSettingsPage() {
 						variant="link"
 						nativeButton={false}
 						render={
-							<a href="https://docs.rxresu.me/api-reference" target="_blank" rel="noopener noreferrer">
+							<a href="/api/openapi/spec.json" target="_blank" rel="noopener noreferrer">
 								<LinkSimpleIcon />
-								<Trans>API Reference</Trans>
+								<Trans>OpenAPI Specification</Trans>
 							</a>
 						}
 					/>

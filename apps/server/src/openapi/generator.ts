@@ -84,7 +84,7 @@ export async function generateOpenApiSpec({ appUrl, version }: GenerateOpenApiSp
 			title: "Job4online",
 			version,
 			description: "Job4online API",
-			license: { name: "MIT", url: "https://github.com/reactive-resume/reactive-resume/blob/main/LICENSE" },
+			license: { name: "MIT", url: "https://github.com/amrit-j4/reactive-resume/blob/main/LICENSE" },
 			contact: { name: "Job4online", url: "https://job4online.com.au" },
 		},
 		servers: [{ url: `${appUrl}/api/openapi` }],
@@ -110,7 +110,6 @@ export async function generateOpenApiSpec({ appUrl, version }: GenerateOpenApiSp
 				},
 			},
 		},
-		externalDocs: { url: "https://docs.rxresu.me", description: "Reactive Resume Documentation (upstream)" },
 		commonSchemas: {
 			ResumeData: { schema: writableResumeDataSchema, strategy: "input" },
 		},

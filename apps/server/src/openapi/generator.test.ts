@@ -131,10 +131,8 @@ describe("generateOpenApiSpec", () => {
 			version: "9.8.7",
 		});
 		expect(spec.servers).toEqual([{ url: "https://rxresu.me/api/openapi" }]);
-		expect(spec.externalDocs).toEqual({
-			url: "https://docs.rxresu.me",
-			description: "Reactive Resume Documentation (upstream)",
-		});
+		// No pointer to the upstream project's documentation
+		expect(spec.externalDocs).toBeUndefined();
 	}, 15_000);
 
 	it("documents the public health endpoint at its actual URL", async () => {

@@ -16,7 +16,6 @@ type FooterLinkGroupProps = {
 
 const getResourceLinks = (): FooterLinkItem[] => [
 	{ url: "https://job4online.com.au", label: t`Job4online Job Board` },
-	{ url: "https://docs.rxresu.me", label: t`Documentation` },
 	{ url: "https://github.com/amrit-j4/reactive-resume", label: t`Source Code` },
 ];
 
