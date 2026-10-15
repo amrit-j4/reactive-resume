@@ -201,6 +201,9 @@ const getAuthConfig = () => {
 		advanced: {
 			database: { generateId },
 			useSecureCookies: authBaseUrl.startsWith("https://"),
+			// Distinct from Better Auth's default ("better-auth"): another app on the same parent domain
+			// (e.g. the Job4online job board) sets cookies with the default name for the whole domain.
+			cookiePrefix: env.AUTH_COOKIE_PREFIX,
 			ipAddress: { ipAddressHeaders: TRUSTED_IP_HEADERS },
 		},
 

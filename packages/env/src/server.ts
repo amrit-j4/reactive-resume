@@ -35,6 +35,13 @@ export const env = createEnv({
 
 		// Authentication
 		AUTH_SECRET: z.string().min(1),
+		// Prefix for the session cookie names. Must differ from any other Better Auth app served from
+		// the same parent domain: browsers send a parent-domain cookie to every subdomain, and a
+		// same-named cookie signed with another app's secret makes this app see no session.
+		AUTH_COOKIE_PREFIX: z
+			.string()
+			.regex(/^[A-Za-z0-9_-]+$/, "AUTH_COOKIE_PREFIX may only contain letters, numbers, - and _")
+			.default("job4online-resume"),
 		BETTER_AUTH_API_KEY: z.string().min(1).optional(),
 
 		// Social Auth (Google)
