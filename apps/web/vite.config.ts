@@ -48,6 +48,7 @@ export default defineConfig({
 	server: {
 		host: true,
 		strictPort: true,
+		allowedHosts: [".job4.online"],
 		port: Number.parseInt(process.env.PORT ?? "3000", 10),
 		proxy: serverProxy,
 	},
