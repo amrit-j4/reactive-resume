@@ -12,22 +12,29 @@ import { authClient } from "@/libs/auth/client";
 import { orpc } from "@/libs/orpc/client";
 import { getAuthRedirectOptions, getOAuthPasskeyOptions, getOAuthSignInOptions, isOAuthRedirect } from "../redirect";
 
-export function SocialAuth() {
+type SocialAuthProps = {
+	/** Password sign-in is off, so these buttons are the only way in: no "or continue with" divider, buttons centred. */
+	ssoOnly?: boolean;
+};
+
+export function SocialAuth({ ssoOnly = false }: SocialAuthProps) {
 	const { data: providers = {}, isLoading } = useQuery(orpc.auth.providers.list.queryOptions());
 
 	return (
 		<>
-			<div className="flex items-center gap-x-2">
-				<hr className="flex-1" />
-				<span className="font-medium text-xs tracking-wide">
-					<Trans context="Choose to authenticate with a social provider (Google, GitHub, etc.) instead of email and password">
-						or continue with
-					</Trans>
-				</span>
-				<hr className="flex-1" />
-			</div>
+			{!ssoOnly && (
+				<div className="flex items-center gap-x-2">
+					<hr className="flex-1" />
+					<span className="font-medium text-xs tracking-wide">
+						<Trans context="Choose to authenticate with a social provider (Google, GitHub, etc.) instead of email and password">
+							or continue with
+						</Trans>
+					</span>
+					<hr className="flex-1" />
+				</div>
+			)}
 
-			{isLoading ? <SocialAuthSkeleton /> : <SocialAuthButtons providers={providers} />}
+			{isLoading ? <SocialAuthSkeleton /> : <SocialAuthButtons providers={providers} ssoOnly={ssoOnly} />}
 		</>
 	);
 }
@@ -45,9 +52,10 @@ function SocialAuthSkeleton() {
 
 type SocialAuthButtonsProps = {
 	providers: RouterOutput["auth"]["providers"]["list"];
+	ssoOnly?: boolean;
 };
 
-function SocialAuthButtons({ providers }: SocialAuthButtonsProps) {
+function SocialAuthButtons({ providers, ssoOnly = false }: SocialAuthButtonsProps) {
 	const router = useRouter();
 	const { callbackURL } = useSearch({ from: "/auth" });
 
@@ -77,7 +85,7 @@ function SocialAuthButtons({ providers }: SocialAuthButtonsProps) {
 	};
 
 	return (
-		<div className="grid grid-cols-2 gap-4">
+		<div className={ssoOnly ? "flex justify-center" : "grid grid-cols-2 gap-4"}>
 			<Button
 				variant="secondary"
 				onClick={() =>
@@ -89,10 +97,16 @@ function SocialAuthButtons({ providers }: SocialAuthButtonsProps) {
 						}),
 					)
 				}
-				className={cn("hidden", "custom" in providers && "inline-flex")}
+				className={cn(
+					"hidden",
+					"custom" in providers && "inline-flex",
+					// Job4online brand: purple in light mode, white in dark mode.
+					ssoOnly &&
+						"h-10 gap-2.5 bg-[oklch(36.02%_0.13_260.44)] px-6 text-white hover:bg-[oklch(36.02%_0.13_260.44)]/90 dark:bg-white dark:text-[oklch(36.02%_0.13_260.44)] dark:hover:bg-white/90",
+				)}
 			>
-				<VaultIcon />
-				{providers.custom}
+				{ssoOnly ? <img src="/logo/job4online.png" alt="" className="h-5 w-auto brightness-0 invert dark:brightness-100 dark:invert-0" /> : <VaultIcon />}
+				{ssoOnly ? t`Sign in with ${providers.custom ?? ""}` : providers.custom}
 			</Button>
 
 			<Button

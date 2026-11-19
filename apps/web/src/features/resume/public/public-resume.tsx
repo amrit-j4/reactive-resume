@@ -74,7 +74,7 @@ export function PublicResumePage({ resume, username, slug, flags, isRoot = false
 							href={isRoot ? "/dashboard" : "/"}
 							className="flex items-center gap-2 text-muted-foreground text-sm transition-colors hover:text-foreground"
 						>
-							<BrandIcon variant="icon" className="size-5" />
+							<BrandIcon variant="icon" className="h-5 w-auto" />
 							<Trans>Build your own resume</Trans>
 						</a>
 					</footer>

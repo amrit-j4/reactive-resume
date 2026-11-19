@@ -6,7 +6,7 @@ export const Route = createFileRoute("/auth/register")({
 	component: RouteComponent,
 	beforeLoad: ({ context, search }) => {
 		if (context.session && !search.reauthenticate) throw redirect(getAuthRedirectOptions(search.callbackURL));
-		if (context.flags.disableSignups) throw redirect({ to: "/auth/login", search, replace: true });
+		if (context.flags.disableSignups || context.flags.disableEmailAuth) throw redirect({ to: "/auth/login", search, replace: true });
 		return { session: null };
 	},
 });

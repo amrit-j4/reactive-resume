@@ -10,15 +10,15 @@ describe("LoadingScreen", () => {
 		render(<LoadingScreen />);
 
 		const icons = screen.getAllByAltText("Job4online");
-		expect(icons).toHaveLength(2);
-		expect(icons.map((icon) => icon.getAttribute("src"))).toEqual(["/icon/dark.svg", "/icon/light.svg"]);
+		expect(icons).toHaveLength(1);
+		expect(icons.map((icon) => icon.getAttribute("src"))).toEqual(["/logo/job4online.png"]);
 		expect(screen.getByLabelText("Loading")).toBeInTheDocument();
 	});
 
 	it("uses the same icon asset as the initial HTML loader", () => {
 		const html = readFileSync("index.html", "utf8");
 
-		expect(html).toContain('src="/icon/dark.svg"');
+		expect(html).toContain('src="/logo/job4online.png"');
 		expect(html).not.toContain('src="/logo/dark.svg"');
 	});
 

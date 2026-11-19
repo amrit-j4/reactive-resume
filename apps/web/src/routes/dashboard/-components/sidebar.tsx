@@ -166,7 +166,7 @@ export function DashboardSidebar() {
 							className="h-auto justify-center"
 							render={
 								<Link to="/">
-									<BrandIcon variant="icon" className="size-6" />
+									<BrandIcon variant="icon" className="h-6 w-auto" />
 									<h1 className="sr-only">Job4online</h1>
 								</Link>
 							}

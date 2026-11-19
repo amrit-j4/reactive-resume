@@ -8,7 +8,7 @@ import { buttonVariants } from "@reactive-resume/ui/components/button";
 export function NotFoundScreen() {
 	return (
 		<div className="mx-auto flex h-svh max-w-md flex-col items-center justify-center gap-y-4">
-			<BrandIcon variant="logo" className="size-12" />
+			<BrandIcon variant="logo" className="h-14 w-auto" />
 
 			<Alert>
 				<WarningIcon />

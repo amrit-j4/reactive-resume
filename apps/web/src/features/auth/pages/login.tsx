@@ -120,10 +120,24 @@ export function LoginPage({ disableEmailAuth, disableSignups }: Props) {
 		<>
 			<div className="space-y-1 text-center">
 				<h1 className="font-semibold text-2xl tracking-tight">
-					<Trans comment="Title on the login page">Sign in to your account</Trans>
+					{disableEmailAuth ? (
+						<Trans comment="Title on the login page when Job4online is the only way to sign in">
+							Build your resume with Job4online
+						</Trans>
+					) : (
+						<Trans comment="Title on the login page">Sign in to your account</Trans>
+					)}
 				</h1>
 
-				{!disableSignups && (
+				{disableEmailAuth && (
+					<p className="text-muted-foreground">
+						<Trans comment="Description on the login page when Job4online is the only way to sign in">
+							Sign in with your Job4online account. No separate account needed.
+						</Trans>
+					</p>
+				)}
+
+				{!disableSignups && !disableEmailAuth && (
 					<div className="text-muted-foreground">
 						<Trans>
 							Don't have an account?{" "}
@@ -247,7 +261,7 @@ export function LoginPage({ disableEmailAuth, disableSignups }: Props) {
 				</form>
 			)}
 
-			<SocialAuth />
+			<SocialAuth ssoOnly={disableEmailAuth} />
 		</>
 	);
 }

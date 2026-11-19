@@ -13,6 +13,12 @@ const providers = {
 	list: (): ProviderList => {
 		const providers: ProviderList = { credential: "Password", passkey: "Passkey" };
 
+		// SSO-only instance (Job4online): no password or passkey sign-in.
+		if (env.FLAG_DISABLE_EMAIL_AUTH) {
+			delete providers.credential;
+			delete providers.passkey;
+		}
+
 		if (env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) providers.google = "Google";
 		if (env.GITHUB_CLIENT_ID && env.GITHUB_CLIENT_SECRET) providers.github = "GitHub";
 		if (env.LINKEDIN_CLIENT_ID && env.LINKEDIN_CLIENT_SECRET) providers.linkedin = "LinkedIn";

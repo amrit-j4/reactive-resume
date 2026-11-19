@@ -255,7 +255,7 @@ export function RegisterPage({ disableEmailAuth }: Props) {
 				</form>
 			)}
 
-			<SocialAuth />
+			<SocialAuth ssoOnly={disableEmailAuth} />
 		</>
 	);
 }
