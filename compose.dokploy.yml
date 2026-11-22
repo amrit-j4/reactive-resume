@@ -100,6 +100,13 @@ services:
       - S3_BUCKET=reactive-resume
       - S3_FORCE_PATH_STYLE=true
       - FLAG_DISABLE_SIGNUPS=${FLAG_DISABLE_SIGNUPS:-false}
+      - FLAG_DISABLE_EMAIL_AUTH=${FLAG_DISABLE_EMAIL_AUTH:-false}
+      # Sign in with Job4online (custom OAuth). Empty values count as unset.
+      - OAUTH_PROVIDER_NAME=${OAUTH_PROVIDER_NAME:-}
+      - OAUTH_CLIENT_ID=${OAUTH_CLIENT_ID:-}
+      - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET:-}
+      - OAUTH_DISCOVERY_URL=${OAUTH_DISCOVERY_URL:-}
+      - OAUTH_SCOPES=${OAUTH_SCOPES:-}
     volumes:
       - app_data:/app/data
     depends_on:
