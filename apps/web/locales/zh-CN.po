@@ -873,6 +873,11 @@ msgstr "把简历拆分成常见的几个部分，方便系统进行分段。"
 msgid "Build your own resume"
 msgstr "打造你自己的简历"
 
+#. Title on the login page when Job4online is the only way to sign in
+#: src/features/auth/pages/login.tsx
+msgid "Build your resume with Job4online"
+msgstr ""
+
 #. Screen-reader dialog title for the command palette in the resume builder
 #: src/features/command-palette/index.tsx
 msgid "Builder Command Palette"
@@ -4926,6 +4931,16 @@ msgstr "立即登录"
 #: src/features/auth/pages/login.tsx
 msgid "Sign in to your account"
 msgstr "登录你的账号"
+
+#. placeholder {0}: providers.custom ?? ""
+#: src/features/auth/components/social-auth.tsx
+msgid "Sign in with {0}"
+msgstr ""
+
+#. Description on the login page when Job4online is the only way to sign in
+#: src/features/auth/pages/login.tsx
+msgid "Sign in with your Job4online account. No separate account needed."
+msgstr ""
 
 #. User menu action to sign out of current account
 #: src/features/user/dropdown-menu.tsx

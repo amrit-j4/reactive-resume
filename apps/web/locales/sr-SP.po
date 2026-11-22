@@ -873,6 +873,11 @@ msgstr "Поделите биографију на уобичајене одељ
 msgid "Build your own resume"
 msgstr "Направите свој животопис"
 
+#. Title on the login page when Job4online is the only way to sign in
+#: src/features/auth/pages/login.tsx
+msgid "Build your resume with Job4online"
+msgstr ""
+
 #. Screen-reader dialog title for the command palette in the resume builder
 #: src/features/command-palette/index.tsx
 msgid "Builder Command Palette"
@@ -4926,6 +4931,16 @@ msgstr "Пријавите се сада"
 #: src/features/auth/pages/login.tsx
 msgid "Sign in to your account"
 msgstr "Пријавите се на свој налог"
+
+#. placeholder {0}: providers.custom ?? ""
+#: src/features/auth/components/social-auth.tsx
+msgid "Sign in with {0}"
+msgstr ""
+
+#. Description on the login page when Job4online is the only way to sign in
+#: src/features/auth/pages/login.tsx
+msgid "Sign in with your Job4online account. No separate account needed."
+msgstr ""
 
 #. User menu action to sign out of current account
 #: src/features/user/dropdown-menu.tsx
