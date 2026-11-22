@@ -1357,6 +1357,10 @@ msgstr "无法恢复此补丁。"
 msgid "Could not save the cover letter. Please try again."
 msgstr "无法保存求职信，请重试。"
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Could not save to Job4online. Please try again."
+msgstr ""
+
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Could not set up two-factor authentication."
 msgstr "无法设置双重身份验证。"
@@ -4591,13 +4595,31 @@ msgstr "复制简历内容或样式前，请先保存简历的更改。"
 msgid "Save the file with every page upright."
 msgstr "保存文件时确保每一页都是正向的。"
 
+#. Button title in the builder's export section: sends the finished PDF to the user's Job4online resumes
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Save to Job4online"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saved"
 msgstr "已保存"
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saved to your Job4online resumes. You can attach it when you apply for jobs."
+msgstr ""
+
+#. Description of the Save to Job4online button
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saves a PDF copy to your Job4online resumes so you can use it when you apply for jobs. Save again after you edit."
+msgstr ""
+
 #: src/features/resume/builder/draft.ts
 msgid "Saving is taking longer than expected. Your changes are still open."
 msgstr "保存用时比预期更长。你的更改仍然保留。"
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saving to Job4online..."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saving…"
@@ -6101,6 +6123,10 @@ msgstr "更新此时间线备注。"
 #: src/dialogs/auth/change-password.tsx
 msgid "Update your password"
 msgstr "更新你的密码"
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Updated in your Job4online resumes. Applications you already sent keep the earlier version."
+msgstr ""
 
 #: src/dialogs/auth/change-password.tsx
 msgid "Updating your password..."

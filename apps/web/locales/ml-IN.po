@@ -1357,6 +1357,10 @@ msgstr "ഈ പാച്ച് പുനഃസ്ഥാപിക്കാൻ ക
 msgid "Could not save the cover letter. Please try again."
 msgstr "കവർ ലെറ്റർ സംരക്ഷിക്കാനായില്ല. ദയവായി വീണ്ടും ശ്രമിക്കുക."
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Could not save to Job4online. Please try again."
+msgstr ""
+
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Could not set up two-factor authentication."
 msgstr "ടു-ഫാക്ടർ ഓത്‌ന്റിക്കേഷൻ സജ്ജമാക്കാനായില്ല."
@@ -4591,13 +4595,31 @@ msgstr "അതിൻ്റെ ഉള്ളടക്കമോ സ്റ്റൈ�
 msgid "Save the file with every page upright."
 msgstr "എല്ലാ പേജും നിവർന്ന നിലയിൽ ഫയൽ സേവ് ചെയ്യുക."
 
+#. Button title in the builder's export section: sends the finished PDF to the user's Job4online resumes
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Save to Job4online"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saved"
 msgstr "സംരക്ഷിച്ചു"
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saved to your Job4online resumes. You can attach it when you apply for jobs."
+msgstr ""
+
+#. Description of the Save to Job4online button
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saves a PDF copy to your Job4online resumes so you can use it when you apply for jobs. Save again after you edit."
+msgstr ""
+
 #: src/features/resume/builder/draft.ts
 msgid "Saving is taking longer than expected. Your changes are still open."
 msgstr "ലാഭിക്കാൻ പ്രതീക്ഷിച്ചതിലും കൂടുതൽ സമയമെടുക്കുന്നു. നിങ്ങളുടെ മാറ്റങ്ങൾ ഇപ്പോഴും തുറന്നിരിക്കുന്നു."
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saving to Job4online..."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saving…"
@@ -6101,6 +6123,10 @@ msgstr "ഈ ടൈംലൈൻ കുറിപ്പ് അപ്‌ഡേറ്
 #: src/dialogs/auth/change-password.tsx
 msgid "Update your password"
 msgstr "നിങ്ങളുടെ പാസ്‌വേഡ് അപ്‌ഡേറ്റ് ചെയ്യുക"
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Updated in your Job4online resumes. Applications you already sent keep the earlier version."
+msgstr ""
 
 #: src/dialogs/auth/change-password.tsx
 msgid "Updating your password..."

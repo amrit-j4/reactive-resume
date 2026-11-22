@@ -11,6 +11,7 @@ import { sampleResumeData } from "@reactive-resume/schema/resume/sample";
 const downloadWithAnchor = vi.hoisted(() => vi.fn());
 const buildDocx = vi.hoisted(() => vi.fn().mockResolvedValue(new Blob(["x"], { type: "application/x-docx" })));
 const createResumePdfBlob = vi.hoisted(() => vi.fn().mockResolvedValue(new Blob(["x"], { type: "application/pdf" })));
+const saveResume = vi.hoisted(() => vi.fn().mockResolvedValue({ replaced: false }));
 const resumeMock = vi.hoisted(() => ({
 	resume: undefined as
 		| undefined
@@ -40,6 +41,10 @@ vi.mock("@/features/resume/export/pdf-document", () => ({ createResumePdfBlob })
 vi.mock("@/libs/resume/section-title-locale", () => ({
 	createSectionTitleResolverForLocale: vi.fn().mockResolvedValue(() => undefined),
 }));
+vi.mock("@/libs/orpc/client", async (importOriginal) => {
+	const actual = await importOriginal<typeof import("@/libs/orpc/client")>();
+	return { ...actual, client: { ...actual.client, job4online: { saveResume } } };
+});
 vi.mock("@/features/resume/builder/draft", () => ({
 	useResume: () => resumeMock.resume,
 }));
@@ -63,6 +68,7 @@ afterEach(() => {
 	downloadWithAnchor.mockReset();
 	buildDocx.mockClear();
 	createResumePdfBlob.mockClear();
+	saveResume.mockClear();
 });
 
 const renderExport = () =>
@@ -139,6 +145,19 @@ describe("ExportSectionBuilder", () => {
 		expect(createResumePdfBlob).toHaveBeenCalledWith(resumeMock.resume?.data, undefined, undefined);
 		expect(downloadWithAnchor).toHaveBeenCalledTimes(1);
 		expect(downloadWithAnchor.mock.calls[0]?.[1]).toBe("My Resume.pdf");
+	});
+
+	it("sends a PDF copy of the resume to Job4online without downloading anything", async () => {
+		renderExport();
+		fireEvent.click(screen.getByRole("button", { name: /Save to Job4online/ }));
+
+		await waitFor(() => expect(saveResume).toHaveBeenCalledTimes(1));
+		const [input] = saveResume.mock.calls[0] as [{ resumeId: string; file: File }];
+		expect(input.resumeId).toBe("r1");
+		expect(input.file.type).toBe("application/pdf");
+		expect(input.file.name).toBe("My Resume.pdf");
+		expect(createResumePdfBlob).toHaveBeenCalledTimes(1);
+		expect(downloadWithAnchor).not.toHaveBeenCalled();
 	});
 
 	it("exports the cover letter when the scope is switched and a cover letter exists", async () => {

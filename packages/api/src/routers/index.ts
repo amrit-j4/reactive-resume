@@ -5,6 +5,7 @@ import { applicationsRouter } from "../features/applications/router";
 import { authRouter } from "../features/auth/router";
 import { coverLettersRouter } from "../features/cover-letters/router";
 import { flagsRouter } from "../features/flags/router";
+import { job4onlineRouter } from "../features/job4online/router";
 import { resumeRouter } from "../features/resume/router";
 import { statisticsRouter } from "../features/statistics/router";
 import { storageRouter } from "../features/storage/router";
@@ -17,6 +18,7 @@ export default {
 	auth: authRouter,
 	coverLetters: coverLettersRouter,
 	flags: flagsRouter,
+	job4online: job4onlineRouter,
 	resume: resumeRouter,
 	statistics: statisticsRouter,
 	storage: storageRouter,

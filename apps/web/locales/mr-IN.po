@@ -1357,6 +1357,10 @@ msgstr "हा पॅच पुनर्स्थापित करता आ�
 msgid "Could not save the cover letter. Please try again."
 msgstr "कव्हर लेटर सेव्ह करू शकलो नाही. कृपया पुन्हा प्रयत्न करा."
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Could not save to Job4online. Please try again."
+msgstr ""
+
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Could not set up two-factor authentication."
 msgstr "दुहेरी घटक ओथेंटिकेशन सेट करता आले नाही."
@@ -4591,13 +4595,31 @@ msgstr "मजकूर किंवा शैली कॉपी करण्�
 msgid "Save the file with every page upright."
 msgstr "प्रत्येक पान सरळ ठेवून फाइल सेव्ह करा."
 
+#. Button title in the builder's export section: sends the finished PDF to the user's Job4online resumes
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Save to Job4online"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saved"
 msgstr "जतन केले"
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saved to your Job4online resumes. You can attach it when you apply for jobs."
+msgstr ""
+
+#. Description of the Save to Job4online button
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saves a PDF copy to your Job4online resumes so you can use it when you apply for jobs. Save again after you edit."
+msgstr ""
+
 #: src/features/resume/builder/draft.ts
 msgid "Saving is taking longer than expected. Your changes are still open."
 msgstr "सेव्ह करण्यास अपेक्षेपेक्षा जास्त वेळ लागत आहे. तुमच्या बदला अद्याप उघडे आहेत."
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saving to Job4online..."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saving…"
@@ -6101,6 +6123,10 @@ msgstr "ही टाइमलाइन टीप अपडेट करा."
 #: src/dialogs/auth/change-password.tsx
 msgid "Update your password"
 msgstr "तुमचा पासवर्ड अपडेट करा"
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Updated in your Job4online resumes. Applications you already sent keep the earlier version."
+msgstr ""
 
 #: src/dialogs/auth/change-password.tsx
 msgid "Updating your password..."

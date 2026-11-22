@@ -1357,6 +1357,10 @@ msgstr "ಈ ಪ್ಯಾಚ್ ಅನ್ನು ಪುನಃಸ್ಥಾಪಿಸ
 msgid "Could not save the cover letter. Please try again."
 msgstr "ಕವರ್ ಲೆಟರ್ ಅನ್ನು ಉಳಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ."
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Could not save to Job4online. Please try again."
+msgstr ""
+
 #: src/dialogs/auth/enable-two-factor.tsx
 msgid "Could not set up two-factor authentication."
 msgstr "ಎರಡು ಅಂಶಗಳ ದೃಢೀಕರಣವನ್ನು ಸಿದ್ಧಪಡಿಸಲು ಸಾಧ್ಯವಾಗಲಿಲ್ಲ."
@@ -4591,13 +4595,31 @@ msgstr "ಅದರ ವಿಷಯ ಅಥವಾ ಶೈಲಿಯನ್ನು ನಕ�
 msgid "Save the file with every page upright."
 msgstr "ಪ್ರತಿ ಪುಟ ನೇರವಾಗಿರುವಂತೆ ಫೈಲ್ ಉಳಿಸಿ."
 
+#. Button title in the builder's export section: sends the finished PDF to the user's Job4online resumes
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Save to Job4online"
+msgstr ""
+
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saved"
 msgstr "ಉಳಿಸಲಾಗಿದೆ"
 
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saved to your Job4online resumes. You can attach it when you apply for jobs."
+msgstr ""
+
+#. Description of the Save to Job4online button
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saves a PDF copy to your Job4online resumes so you can use it when you apply for jobs. Save again after you edit."
+msgstr ""
+
 #: src/features/resume/builder/draft.ts
 msgid "Saving is taking longer than expected. Your changes are still open."
 msgstr "ಉಳಿತಾಯ ನಿರೀಕ್ಷೆಗಿಂತ ಹೆಚ್ಚು ಸಮಯ ತೆಗೆದುಕೊಳ್ಳುತ್ತಿದೆ. ನಿಮ್ಮ ಬದಲಾವಣೆಗಳು ಇನ್ನೂ ತೆರೆದಿರುತ್ತವೆ."
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Saving to Job4online..."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/header.tsx
 msgid "Saving…"
@@ -6101,6 +6123,10 @@ msgstr "ಈ ಕಾಲರೇಖೆ ಟಿಪ್ಪಣಿಯನ್ನು ನವೀ
 #: src/dialogs/auth/change-password.tsx
 msgid "Update your password"
 msgstr "ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ನವೀಕರಿಸಿ"
+
+#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+msgid "Updated in your Job4online resumes. Applications you already sent keep the earlier version."
+msgstr ""
 
 #: src/dialogs/auth/change-password.tsx
 msgid "Updating your password..."

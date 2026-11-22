@@ -70,6 +70,10 @@ export const env = createEnv({
 			.transform((value) => value.split(" "))
 			.default(["openid", "profile", "email"]),
 
+		// Job4online: "Save to Job4online" sends a finished PDF to the Job4online API (both optional; the button reports it is not set up without them)
+		JOB4ONLINE_API_URL: z.url({ protocol: /https?/ }).optional(),
+		JOB4ONLINE_RESUME_API_KEY: z.string().min(1).optional(),
+
 		// Email (SMTP)
 		SMTP_HOST: z.string().min(1).optional(),
 		SMTP_PORT: z.coerce.number().int().min(1).max(65535).default(587),
