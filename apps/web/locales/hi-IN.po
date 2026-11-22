@@ -1357,7 +1357,7 @@ msgstr "इस पैच को पुनर्स्थापित नही�
 msgid "Could not save the cover letter. Please try again."
 msgstr "कवर लेटर सहेज नहीं जा सका। कृपया फिर से प्रयास करें।"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+#: src/features/resume/export/save-to-job4online.ts
 msgid "Could not save to Job4online. Please try again."
 msgstr ""
 
@@ -4595,7 +4595,10 @@ msgstr "इसकी सामग्री या शैली की प्र�
 msgid "Save the file with every page upright."
 msgstr "फ़ाइल को इस तरह सहेजें कि हर पेज सीधा हो।"
 
+#. Button in the builder header: sends the finished PDF to the user's Job4online resumes
+#. Button in the builder header: sends the finished PDF to the user's Job4online resumes
 #. Button title in the builder's export section: sends the finished PDF to the user's Job4online resumes
+#: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
 msgid "Save to Job4online"
 msgstr ""
@@ -4604,7 +4607,7 @@ msgstr ""
 msgid "Saved"
 msgstr "सहेजा गया"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+#: src/features/resume/export/save-to-job4online.ts
 msgid "Saved to your Job4online resumes. You can attach it when you apply for jobs."
 msgstr ""
 
@@ -4617,7 +4620,7 @@ msgstr ""
 msgid "Saving is taking longer than expected. Your changes are still open."
 msgstr "बचत में अपेक्षा से अधिक समय लग रहा है. आपके परिवर्तन अभी भी खुले हैं."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+#: src/features/resume/export/save-to-job4online.ts
 msgid "Saving to Job4online..."
 msgstr ""
 
@@ -6124,8 +6127,8 @@ msgstr "इस समयरेखा नोट को अपडेट करे�
 msgid "Update your password"
 msgstr "अपना पासवर्ड अपडेट करें"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
-msgid "Updated in your Job4online resumes. Applications you already sent keep the earlier version."
+#: src/features/resume/export/save-to-job4online.ts
+msgid "Updated in your Job4online resumes."
 msgstr ""
 
 #: src/dialogs/auth/change-password.tsx

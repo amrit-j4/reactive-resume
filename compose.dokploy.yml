@@ -107,6 +107,9 @@ services:
       - OAUTH_CLIENT_SECRET=${OAUTH_CLIENT_SECRET:-}
       - OAUTH_DISCOVERY_URL=${OAUTH_DISCOVERY_URL:-}
       - OAUTH_SCOPES=${OAUTH_SCOPES:-}
+      # "Save to Job4online": where the finished PDF is sent, and the shared key Job4.Api expects (ResumeBuilder__ApiKey there).
+      - JOB4ONLINE_API_URL=${JOB4ONLINE_API_URL:-}
+      - JOB4ONLINE_RESUME_API_KEY=${JOB4ONLINE_RESUME_API_KEY:-}
     volumes:
       - app_data:/app/data
     depends_on:

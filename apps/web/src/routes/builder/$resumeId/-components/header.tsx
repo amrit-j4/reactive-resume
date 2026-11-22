@@ -4,6 +4,7 @@ import {
 	CaretDownIcon,
 	CheckCircleIcon,
 	CircleNotchIcon,
+	CloudArrowUpIcon,
 	CopySimpleIcon,
 	DownloadSimpleIcon,
 	HouseSimpleIcon,
@@ -35,6 +36,7 @@ import {
 	useResumeStore,
 } from "@/features/resume/builder/draft";
 import { ResumeDownloadDialog } from "@/features/resume/export/download-dialog";
+import { useSaveToJob4online } from "@/features/resume/export/save-to-job4online";
 import { useConfirm } from "@/hooks/use-confirm";
 import { getResumeErrorMessage } from "@/libs/error-message";
 import { orpc } from "@/libs/orpc/client";
@@ -91,6 +93,7 @@ export function BuilderHeader() {
 			</div>
 
 			<div className="flex min-w-0 flex-1 items-center justify-end gap-x-1">
+				<SaveToJob4onlineButton />
 				<ResumeDownloadButton />
 
 				<Button size="icon" variant="ghost" className="hidden md:flex" onClick={() => toggleSidebar("right")}>
@@ -106,6 +109,27 @@ export function BuilderHeader() {
 	);
 }
 
+function SaveToJob4onlineButton() {
+	const resume = useCurrentResume();
+	const { save, isSaving } = useSaveToJob4online(resume);
+
+	return (
+		<Button size="sm" disabled={isSaving} onClick={save} className="px-2 sm:px-2.5">
+			{isSaving ? <CircleNotchIcon className="animate-spin sm:me-1.5" /> : <CloudArrowUpIcon className="sm:me-1.5" />}
+			<span className="hidden sm:inline">
+				<Trans comment="Button in the builder header: sends the finished PDF to the user's Job4online resumes">
+					Save to Job4online
+				</Trans>
+			</span>
+			<span className="sr-only sm:hidden">
+				<Trans comment="Button in the builder header: sends the finished PDF to the user's Job4online resumes">
+					Save to Job4online
+				</Trans>
+			</span>
+		</Button>
+	);
+}
+
 function ResumeDownloadButton() {
 	const resume = useCurrentResume();
 
@@ -115,6 +139,7 @@ function ResumeDownloadButton() {
 			trigger={(disabled) => (
 				<Button
 					size="sm"
+					variant="outline"
 					aria-label={t({
 						comment: "Primary action in the builder header to open resume download options",
 						message: "Download options",

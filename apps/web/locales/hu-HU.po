@@ -1357,7 +1357,7 @@ msgstr "Nem sikerült visszaállítani ezt a javítást."
 msgid "Could not save the cover letter. Please try again."
 msgstr "Nem sikerült menteni a kísérőlevelet. Kérjük, próbálja újra."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+#: src/features/resume/export/save-to-job4online.ts
 msgid "Could not save to Job4online. Please try again."
 msgstr ""
 
@@ -4595,7 +4595,10 @@ msgstr "A tartalom vagy a stílus másolása előtt mentse az önéletrajz módo
 msgid "Save the file with every page upright."
 msgstr "Mentsd el a fájlt úgy, hogy minden oldal álló helyzetű legyen."
 
+#. Button in the builder header: sends the finished PDF to the user's Job4online resumes
+#. Button in the builder header: sends the finished PDF to the user's Job4online resumes
 #. Button title in the builder's export section: sends the finished PDF to the user's Job4online resumes
+#: src/routes/builder/$resumeId/-components/header.tsx
 #: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
 msgid "Save to Job4online"
 msgstr ""
@@ -4604,7 +4607,7 @@ msgstr ""
 msgid "Saved"
 msgstr "Mentett"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+#: src/features/resume/export/save-to-job4online.ts
 msgid "Saved to your Job4online resumes. You can attach it when you apply for jobs."
 msgstr ""
 
@@ -4617,7 +4620,7 @@ msgstr ""
 msgid "Saving is taking longer than expected. Your changes are still open."
 msgstr "A mentés a vártnál tovább tart. A módosítások továbbra is nyitva állnak."
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
+#: src/features/resume/export/save-to-job4online.ts
 msgid "Saving to Job4online..."
 msgstr ""
 
@@ -6124,8 +6127,8 @@ msgstr "Frissítsd ezt az idővonaljegyzetet."
 msgid "Update your password"
 msgstr "Jelszó frissítése"
 
-#: src/routes/builder/$resumeId/-sidebar/right/sections/export.tsx
-msgid "Updated in your Job4online resumes. Applications you already sent keep the earlier version."
+#: src/features/resume/export/save-to-job4online.ts
+msgid "Updated in your Job4online resumes."
 msgstr ""
 
 #: src/dialogs/auth/change-password.tsx
